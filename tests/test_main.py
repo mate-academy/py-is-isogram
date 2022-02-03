@@ -10,5 +10,4 @@ def test_case_insensitivity():
 
 
 def test_repeated_letters():
-    assert is_isogram("surrender") is False
     assert is_isogram("ihavealotrepeatedletter") is False
