@@ -1,1 +1,17 @@
-# write your code here
+from app.main import is_isogram
+
+
+def test_should_return_true_for_empty_string():
+    assert is_isogram("") is True
+
+
+def test_should_return_true_for_isogram_word_with_big_and_small_letters():
+    assert is_isogram("PlayGrounds") is True
+
+
+def test_should_return_false_for_different_repeating_letters():
+    assert is_isogram("opportunity") is False
+
+
+def test_should_return_false_for_repeating_big_and_small_letters():
+    assert is_isogram("Test") is False
