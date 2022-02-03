@@ -13,6 +13,6 @@ def test_string_without_repeating():
     assert is_isogram('playgrounds')
 
 
-def test_all_words_repeat():
+def test_all_letters_repeat():
     assert not is_isogram("bbbBBBBbb")
 
