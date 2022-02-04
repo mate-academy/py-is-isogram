@@ -6,8 +6,8 @@ def test_for_empty_string():
 
 
 def test_case_insensitivity():
-    assert is_isogram("pReTtY") == is_isogram("PrEtTy")
+    assert is_isogram("pReTtY") is False
 
 
-def test_repeated_letters():
-    assert is_isogram("ihavealotrepeatedletter") is False
+def test_equal_non_consecutive_letters():
+    assert is_isogram("abcdefa") is False
