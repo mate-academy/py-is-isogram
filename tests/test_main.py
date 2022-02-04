@@ -5,6 +5,10 @@ def test_for_empty_string():
     assert is_isogram("") is True
 
 
+def test_no_repeated_letters():
+    assert is_isogram("iampython") is True
+
+
 def test_case_insensitivity():
     assert is_isogram("pReTtY") is False
 
