@@ -15,3 +15,7 @@ def test_with_symbols_spaces_and_digits():
 
 def test_with_repeated_letters():
     assert is_isogram("Cool") is False
+
+
+def test_long_string_with_repeated_letters():
+    assert is_isogram("qwertyuioplkjhgfdsazxcvbnmlkjhgfdsaqwertyuiop") is False
