@@ -5,7 +5,7 @@ def test_empty_string():
     assert is_isogram("")
 
 
-def test_true():
+def test_is_isogram_should_be_equal_true():
     values = ["unCopyrIghtAbLe", "aMbiDextrOuslY", "plaYGrounDs"]
     actual = []
     for word in values:
@@ -14,7 +14,7 @@ def test_true():
     assert all(actual)
 
 
-def test_false():
+def test_is_isogram_should_be_equal_false():
     values = ["loOk", "Adam", "DOcToRwHO"]
     actual = []
     for word in values:
@@ -23,6 +23,6 @@ def test_false():
     assert not all(actual)
 
 
-def test_symbols():
+def test_when_word_contains_symbols():
     assert not is_isogram('**8+%+9865)')
     assert is_isogram('*8%+965)')
