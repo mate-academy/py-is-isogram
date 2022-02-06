@@ -10,12 +10,9 @@ def test_lower_and_upper_cases():
     assert not is_isogram("pashTet")
 
 
-def test_is_isogram_true():
+def test_is_isogram_efficiency():
     assert is_isogram("cat")
     assert is_isogram("Duplicates")
-
-
-def test_is_isogram_false():
     assert not is_isogram("Dictionary")
     assert not is_isogram("woodoo")
 
