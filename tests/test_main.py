@@ -19,3 +19,7 @@ def test_with_repeated_letters():
 
 def test_long_string_with_repeated_letters():
     assert is_isogram("qwertyuioplkjhgfdsazxcvbnmlkjhgfdsaqwertyuiop") is False
+
+
+def test_uppercase_and_lowercase():
+    assert is_isogram("Aa") is False
