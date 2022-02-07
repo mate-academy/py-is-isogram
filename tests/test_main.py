@@ -22,12 +22,21 @@ def test_for_empty_string():
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("FhjhuigfffFfFfFfFfFfFfAaAaAa", False),
-        ("haroldddddddddddd", False),
-        ("AEZakmiohfodsfhudafidafbudiafbdui", False)
+        pytest.param(
+            "FhjhuigfffFfFfFfFfFfFfAaAaAa",
+            False,
+            id="Test repeat letters in different cases"),
+        pytest.param(
+            "haroldddddddddddd",
+            False,
+            id="Test repeat letters in lower case"
+        ),
+        pytest.param(
+            "QQQDDDDJJJJJJSSSFFFF",
+            False,
+            id="Test repeat letters in upper case"
+        ),
     ]
 )
 def test_for_repeat_letters(word, expected):
     assert is_isogram(word) is expected
-
-
