@@ -5,9 +5,12 @@ def test_empty_string():
     assert is_isogram("") is True
 
 
-def test_case_insensitive():
-    assert is_isogram("LKJFSDLIlsdfeojf") is False
-    assert is_isogram("QWERTyuiop") is True
+def test_repeated_insensitive():
+    assert is_isogram("QWERTYUIOPP") is False
+
+
+def test_repeated_sensitive():
+    assert is_isogram("asdfghjkll") is False
 
 
 def test_core_functionality():
