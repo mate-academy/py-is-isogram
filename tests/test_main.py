@@ -5,7 +5,7 @@ def test_empty_string_is_isogram():
     assert is_isogram("") is True
 
 
-def test_mixed_letters():
+def test_non_repeated_letters():
     assert is_isogram("AsdfgTkl") is True
     assert is_isogram("KjhgFsrT") is True
 
