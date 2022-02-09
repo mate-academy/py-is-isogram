@@ -18,7 +18,3 @@ def test_repeating_consecutive_letters():
 
 def test_repeating_non_consecutive_letters():
     assert is_isogram("loko") is False
-
-
-def test_apostrophe():
-    assert is_isogram("lk'l") is False
