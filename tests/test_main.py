@@ -11,6 +11,5 @@ def test_isogram_string():
 
 
 def test_non_isogram_string():
-    tested_string = 'abccbc'
-
+    tested_string = 'abcCbA'
     assert not is_isogram(tested_string)
