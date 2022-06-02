@@ -8,7 +8,7 @@ from app.main import is_isogram
                                        id="test only unics letters"),
                           pytest.param("book", False,
                                        id="test repeating letters"),
-                          pytest.param("Adam", False,
+                          pytest.param("Madam", False,
                                        id="test case-insensitive "
                                           "repeating letters"),
                           pytest.param("", True, id="test empty string")])
