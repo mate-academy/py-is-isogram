@@ -15,9 +15,13 @@ class TestIsIsogram:
         assert goals is False
 
     def test_not_isogram_string_with_uppercase(self):
-        goals = is_isogram("Madam")
+        goals = is_isogram("Adam")
         assert goals is False
 
     def test_isogram_with_uppercase(self):
         goals = is_isogram("AdOlF")
+        assert goals is True
+
+    def test_isogram_with_uppercase_and_not_isog(self):
+        goals = is_isogram("Madam")
         assert goals is True
