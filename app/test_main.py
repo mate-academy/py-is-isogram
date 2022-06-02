@@ -15,5 +15,3 @@ def test_word_with_big_letters():
 
 def test_is_empty():
     assert is_isogram('') is True
-
-
