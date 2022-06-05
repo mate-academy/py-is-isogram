@@ -23,4 +23,3 @@ def test_with_consecutive():
 
 def test_with_non_consecutive():
     assert is_isogram("AdaM") is False
-
