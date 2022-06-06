@@ -1,8 +1,9 @@
 import pytest
 from app.main import is_isogram
 
+
 @pytest.mark.parametrize(
-    "word, excpected",
+    "word, expected",
     [
         pytest.param(
             "playgrounds",
@@ -22,5 +23,5 @@ from app.main import is_isogram
             id="Empty string is True"),
     ]
 )
-def test_get_coin_combination(word, excpected):
-    assert is_isogram(word) == excpected
+def test_get_coin_combination(word, expected):
+    assert is_isogram(word) == expected
