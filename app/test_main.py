@@ -1,4 +1,4 @@
-from app.main  import is_isogram
+from app.main import is_isogram
 
 
 def test_empty_string_must_be_true():
