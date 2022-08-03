@@ -14,4 +14,4 @@ def test_if_identical_letters_separately():
 
 
 def test_if_no_identical_letters():
-    assert is_isogram("President") is True
+    assert is_isogram("Daughter") is True
