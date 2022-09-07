@@ -19,7 +19,7 @@ class TestIsIsogram:
 
             ),
             pytest.param(
-               "Adam",
+                "Adam",
                 False,
                 id="the more than one char: upper and lower"
             ),
