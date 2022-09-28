@@ -18,7 +18,8 @@ import pytest
         pytest.param(
             "Adam",
             False,
-            id="should be case-insensitive 'upper' and 'lower' letter are the same"
+            id="should be case-insensitive 'upper' and "
+               "'lower' letter are the same"
         ),
         pytest.param(
             "",
