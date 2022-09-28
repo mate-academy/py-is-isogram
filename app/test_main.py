@@ -11,7 +11,7 @@ from app.main import is_isogram
         ),
         pytest.param(
             "Adam", False,
-            id="String with different cases of the same letter is not an isogram"
+            id="String with different cases of letter is not an isogram"
         ),
         pytest.param(
             "playgrounds", True,
