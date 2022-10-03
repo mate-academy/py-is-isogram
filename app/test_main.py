@@ -13,5 +13,5 @@ def test_should_return_false_if_word_has_repeating_letters():
     assert not is_isogram('look')
 
 
-def test_should_return_false_if_word_has_the_same_lower_and_upper_case_letter():
+def test_should_return_false_if_word_has_repeating_lower_and_upper_letter():
     assert not is_isogram('Adam')
