@@ -17,7 +17,7 @@ from app.main import is_isogram
         ),
         pytest.param(
             "Adam", False,
-            id="should return False because function should be case-insensitive"
+            id="should return False, function should be case-insensitive"
         )
     ]
 )
