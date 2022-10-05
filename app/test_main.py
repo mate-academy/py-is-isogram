@@ -15,5 +15,3 @@ def test_no_repeating_letters():
 
 def test_case_sensitivity():
     assert is_isogram("Adam") is False
-
-
