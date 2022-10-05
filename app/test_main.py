@@ -16,11 +16,13 @@ from app.main import is_isogram
         ),
         pytest.param(
             "Adam", False,
-            id="test should return False when word has same letter in different case"
+            id="test should return False when word has "
+               "same letter in different case"
         ),
         pytest.param(
             "look", False,
-            id="test should return False when words has same letter in same case"
+            id="test should return False when word "
+               "has same letter in same case"
         )
     ]
 )
