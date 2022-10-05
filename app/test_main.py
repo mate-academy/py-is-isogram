@@ -16,6 +16,10 @@ import pytest
         pytest.param(
             "look", False,
             id="For 'look' expected False"
+        ),
+        pytest.param(
+            "Adam", False,
+            id="For 'Adam' expected False"
         )
     ],
 )
