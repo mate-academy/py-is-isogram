@@ -1,25 +1,33 @@
 from app.main import is_isogram
 
-
-def test_empty_string() -> None:
-    word = is_isogram("")
-
-    assert word is True
+import pytest
 
 
-def test_consecutive_same_letters() -> None:
-    word = is_isogram("loOk")
-
-    assert word is False
-
-
-def test_non_consecutive_same_letters() -> None:
-    word = is_isogram("Adam")
-
-    assert word is False
-
-
-def test_isogram_word() -> None:
-    word = is_isogram("playGrounds")
-
-    assert word is True
+@pytest.mark.parametrize(
+    "word, answer",
+    [
+        pytest.param(
+            "playgrounds",
+            True,
+            id="should return 'True' if word is isogram"
+        ),
+        pytest.param(
+            "look",
+            False,
+            id="should return 'False' if word is not isogram"
+        ),
+        pytest.param(
+            "Adam",
+            False,
+            id="should be case-insensitive 'upper' and "
+               "'lower' letter are the same"
+        ),
+        pytest.param(
+            "",
+            True,
+            id="should return 'True' if word is empty string"
+        )
+    ]
+)
+def test_is_isogram(word: str, answer: bool) -> None:
+    assert is_isogram(word) == answer
