@@ -5,9 +5,9 @@ import pytest
 @pytest.mark.parametrize(
     "string, expected",
     [
-        pytest.param("playgrounds", True, 
+        pytest.param("playgrounds", True,
                      id="should return 'True' for isogram"),
-        pytest.param("look", False, 
+        pytest.param("look", False,
                      id="should return 'False' for not isogram"),
         pytest.param("Adam", False, id="should be case-insensitive"),
         pytest.param("", True, id="empty string should be isogram")
