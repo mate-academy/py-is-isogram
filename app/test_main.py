@@ -14,7 +14,7 @@ def test_uppercase_words() -> None:
 
 
 def test_repeating_letters() -> None:
-    assert is_isogram('look') is False
+    assert is_isogram("look") is False
 
 
 def test_non_consecutive_repeating_letters() -> None:
@@ -22,4 +22,4 @@ def test_non_consecutive_repeating_letters() -> None:
 
 
 def test_non_repeating_letters() -> None:
-    assert is_isogram('playgrounds') is True
+    assert is_isogram("playgrounds") is True
