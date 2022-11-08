@@ -13,7 +13,7 @@ def test_consistent_letters() -> None:
     assert is_isogram("look") is False
 
 
-def test_nonconsistent_letters() -> None:
+def test_non_consistent_letters() -> None:
     assert is_isogram("loko") is False
 
 
