@@ -16,20 +16,20 @@ from app.main import is_isogram
             id="should return 'True' if word is isogram"
         ),
         pytest.param(
-            "look",
-            False,
-            id="should return 'False' if word is not isogram"
-        ),
+             "moment",
+             False,
+             id="repeating non-consecutive letters not allowed"
+         ),
         pytest.param(
-            "Iphone",
-            True,
-            id="function should be case-insensitive"
-        ),
+             "Moment",
+             False,
+             id="case of letters doesnt matter"
+         ),
         pytest.param(
-            "abcd",
-            False,
-            id="not only consecutive letters are not an isogram."
-        )
+             "cool",
+             False,
+             id="repeating consecutive letters not allowed"
+         )
     ]
 )
 def test_for_right_work_func(
