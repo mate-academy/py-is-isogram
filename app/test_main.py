@@ -8,6 +8,7 @@ def test_empty_string() -> None:
 def test_not_only_consecutive_letters() -> None:
     assert is_isogram("aba") is False
 
+
 def different_case_of_letters() -> None:
     assert is_isogram("isIsogram") is False
 
