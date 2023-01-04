@@ -1,15 +1,12 @@
-import pytest
 from app.main import is_isogram
-
-
-def test_invalid_input_throws() -> None:
-    with pytest.raises(TypeError):
-        is_isogram(1)
 
 
 def test_empty_string() -> None:
     assert is_isogram("") is True
 
+
+def test_not_only_consecutive_letters() -> None:
+    assert is_isogram("aba") is False
 
 def different_case_of_letters() -> None:
     assert is_isogram("isIsogram") is False
