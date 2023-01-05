@@ -24,7 +24,7 @@ class TestIsIsogram:
         [
             (12),
             (["look"]),
-            (False)
+            (True)
         ]
     )
     def test_receive_correct_value_type(
