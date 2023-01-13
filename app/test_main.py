@@ -8,7 +8,7 @@ from app.main import is_isogram
     [
         pytest.param("playgrounds", True, id="isogram"),
         pytest.param("look", False, id="with repeated letters"),
-        pytest.param("Adam", False, id="with repeated letters in different registers"),
+        pytest.param("Adam", False, id="in different registers"),
         pytest.param("", True, id="empty string")
     ]
 )
