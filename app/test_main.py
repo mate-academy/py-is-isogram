@@ -13,5 +13,5 @@ def test_big_and_small_letter_equal() -> None:
     assert is_isogram("Adam") is False
 
 
-def test_empty_string() -> None:
+def test_string_empty() -> None:
     assert is_isogram("") is True
