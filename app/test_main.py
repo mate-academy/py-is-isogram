@@ -8,7 +8,11 @@ def test_normal_true() -> None:
 
 
 def test_normal_false() -> None:
-    assert is_isogram("AbC") is False
+    assert is_isogram("cAA") is False
+
+
+def test_not_consecutive_letters() -> None:
+    assert is_isogram("abcb") is False
 
 
 def test_empty_string() -> None:
