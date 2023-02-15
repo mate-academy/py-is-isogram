@@ -14,20 +14,22 @@ import pytest
         pytest.param(
             "playgrounds",
             True,
-            id="should return True if the word does not contain the same letters"
+            id="True if the word does not contain the same letters"
         ),
         pytest.param(
             "Adam",
             False,
-            id="should return False if the word contains two letters in different cases"
+            id="False if the word contains two letters in different cases"
         ),
         pytest.param(
             "look",
             False,
-            id="should return False if the word contains two identical letters"
+            id="False if the word contains two identical letters"
         )
 
     ]
 )
-def test_return_boolean_value_correctly(word: str, expected_bool: bool) -> None:
+def test_return_boolean_value_correctly(
+        word: str, expected_bool: bool
+) -> None:
     assert is_isogram(word) is expected_bool
