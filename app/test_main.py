@@ -7,7 +7,7 @@ class TestIsIsogramClass:
     @pytest.mark.parametrize(
         "check_word, result",
         [
-            pytest.param('playgrounds',
+            pytest.param("playgrounds",
                          True,
                          id="this is an isogram"),
             pytest.param("look",
