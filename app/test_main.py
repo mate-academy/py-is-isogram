@@ -37,7 +37,7 @@ class TestIsogramCheck:
     )
     def is_func_works_correctly(
             self,
-            string,
-            result
+            string: str,
+            result: bool
     ) -> None:
         assert is_isogram(string) is result
