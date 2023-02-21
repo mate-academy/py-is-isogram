@@ -6,7 +6,7 @@ from app.main import is_isogram
 
 class TestIsogramCheck:
     @pytest.mark.parametrize(
-        "string, result",
+        "value, result",
         [
             pytest.param(
                 "",
@@ -26,18 +26,13 @@ class TestIsogramCheck:
             pytest.param(
                 "Test",
                 False,
-                id="Should be case-insensitive"
-            ),
-            pytest.param(
-                "grogu",
-                False,
-                id="Should return False if letters are non-consecutive"
+                id="Should be case-insensitive and non-consecutive"
             )
         ]
     )
-    def is_func_works_correctly(
+    def test_func_works_correctly(
             self,
-            string: str,
+            value: str,
             result: bool
     ) -> None:
-        assert is_isogram(string) is result
+        assert is_isogram(value) == result
