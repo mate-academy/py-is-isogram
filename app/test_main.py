@@ -17,5 +17,5 @@ def test_should_be_case_insensitive() -> None:
     assert is_isogram("JaCk") is True
 
 
-def test_different_cases_of_same_letter_is_not_isogram():
+def test_different_cases_of_same_letter_is_not_isogram() -> None:
     assert is_isogram("Ggt") is False
