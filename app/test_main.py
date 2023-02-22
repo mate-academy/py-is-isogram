@@ -25,7 +25,7 @@ def test_with_punctuation_is_isogram() -> bool:
 
 def test_non_consecutive_letters_are_not_isogram() -> bool:
     assert is_isogram("abcdefghijklmnopqrstuvwxyz") is True
-    assert is_isogram("notices") is False
+    assert is_isogram("noticeses") is False
 
 
 def test_consecutive_letters_are_not_isogram() -> bool:
