@@ -1,3 +1,21 @@
 from app.main import is_isogram
 
-# write your code here
+
+def test_empty_string():
+    assert is_isogram("") is True
+
+
+def test_same_letters_same_case():
+    assert is_isogram("wood") is False
+
+
+def test_same_letters_different_case():
+    assert is_isogram("Adam") is False
+
+
+def test_no_repeated_letters_same_case():
+    assert is_isogram("mate") is True
+
+
+def test_no_repeated_letters_different_case():
+    assert is_isogram("Mate") is True
