@@ -10,8 +10,8 @@ class TestIsIsogram:
         "word, expected_result",
         [
             ("isogram", True),
-            ("algorithm", False),
-            ("jumbled", False),
+            ("algorithm", True),
+            ("jumbled", True),
             ("subdermatoglyphic", True),
             ("aba", False),
             ("abcabc", False),
