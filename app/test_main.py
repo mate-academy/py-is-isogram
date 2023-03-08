@@ -1,3 +1,5 @@
 from app.main import is_isogram
 
-# write your code here
+
+def test_word_is_isogram() -> None:
+    assert is_isogram('fork') == True
