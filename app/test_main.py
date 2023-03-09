@@ -21,12 +21,13 @@ class TestIsIsogram:
             pytest.param(
                 "Adam",
                 False,
-                id="should return False when one letter occurs low and capitalize"
+                id="should return False when one letter "
+                   "occurs in low and capitalize cases"
             ),
             pytest.param(
                 "",
                 True,
-                id="should return True when string is emptyq"
+                id="should return True when string is empty"
             )
         ]
 
