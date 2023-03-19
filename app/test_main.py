@@ -6,7 +6,7 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word,bool_value",
     [
-        ('playgrounds', True),
+        ("playgrounds", True),
         ("look", False),
         ("Adam", False),
         ("", True)
