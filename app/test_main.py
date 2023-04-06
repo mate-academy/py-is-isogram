@@ -31,4 +31,3 @@ def test_if_cat_has_years(word: str, expected_result: bool) -> None:
     assert (
         is_isogram(word) == expected_result
     ), f"{word} should be {expected_result}"
-
