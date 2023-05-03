@@ -7,7 +7,7 @@ class TestIsIsogram:
         "word,result",
         [
             pytest.param(
-              "playgrounds",
+                "playgrounds",
                 True,
                 id="Test function for word without repeating letter"
             ),
@@ -37,7 +37,7 @@ class TestIsIsogram:
             self,
             word: str,
             result: bool
-        ) -> None:
+    ) -> None:
         assert is_isogram(word) == result
 
     @pytest.mark.parametrize(
@@ -59,6 +59,6 @@ class TestIsIsogram:
             self,
             word: str,
             error: TypeError
-    ):
+    ) -> None:
         with pytest.raises(error):
             is_isogram(word)
