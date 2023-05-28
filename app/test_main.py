@@ -18,9 +18,12 @@ class TestIsIsogram:
                 "playgrounds", True, id="Should return correct result"
             ),
             pytest.param(
-                "zoom", False, id="Consecutive letters should be count as non-isogram"
+                "zoom", False, id="Consecutive letters should be non-isogram"
             )
         ]
     )
-    def test_should_return_correct_result(self, word, expected_result):
+    def test_should_return_correct_result(
+            self,
+            word: str,
+            expected_result: bool) -> None:
         assert is_isogram(word) == expected_result
