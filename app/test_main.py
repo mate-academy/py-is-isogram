@@ -7,28 +7,28 @@ from app.main import is_isogram
     "initial_input, expected_result",
     [
         pytest.param(
-            'playgrounds',
+            "playgrounds",
             True,
             id="check parameter without repetition"
         ),
         pytest.param(
-            'look',
+            "look",
             False,
             id="check parameter with repetition"
         ),
         pytest.param(
-            'Adam',
+            "Adam",
             False,
             id="check parameter with upper repetition"
         ),
         pytest.param(
-            '',
+            "",
             True,
             id="check parameter with empty string"
         )
     ]
 )
-def test_modify_isogram(initial_input, expected_result):
+def test_modify_isogram(initial_input: str, expected_result: bool) -> None:
     assert is_isogram(initial_input) == expected_result
 
 
@@ -42,6 +42,9 @@ def test_modify_isogram(initial_input, expected_result):
         )
     ]
 )
-def test_raising_error_correctly(initial_error, expected_error):
+def test_raising_error_correctly(
+        initial_error: any,
+        expected_error: any
+) -> None:
     with pytest.raises(expected_error):
         is_isogram(initial_error)
