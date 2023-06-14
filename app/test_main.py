@@ -9,7 +9,8 @@ from app.main import is_isogram
     [
         pytest.param("", True, id="empty string should return True"),
         pytest.param("Adam", False, id="letter case and isogram"),
-        pytest.param("look", False, id="in case when str isn't isogram")
+        pytest.param("look", False, id="in case when str isn't isogram"),
+        pytest.param("playgrounds", True, id="In case is True")
     ]
 )
 def test_is_isogram(income_string: str, exp_result: bool) -> None:
