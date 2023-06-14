@@ -20,5 +20,5 @@ import pytest
         "test_word_with_repeating_syllable"
     ]
 )
-def test_is_isogram(word, expected_result):
+def test_is_isogram(word: str, expected_result: bool) -> None:
     assert is_isogram(word) == expected_result
