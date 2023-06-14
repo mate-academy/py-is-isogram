@@ -15,12 +15,12 @@ class TestIsIsogram:
             ("  ", False),
         ],
         ids=[
-            "should return True if each letter in phrase occurs the same number of times",
-            "should return False if phrase have more then 1 same letter",
-            "should return False if phrase have more then 1 same letter (big or small)",
-            "should return True if phrase is empty",
-            "should return True if phrase contain 1 space",
-            "should return False if phrase contain more then 1 space",
+            "should be True if phrase is isogram",
+            "should be False if phrase have > 1 same letter",
+            "should be False if phrase have > 1 same letter (big/small)",
+            "should be True if phrase is empty",
+            "should be True if phrase contain 1 space",
+            "should be False if phrase contain more then 1 space",
         ]
     )
     def test_correct_combination(
