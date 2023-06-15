@@ -16,6 +16,7 @@ from app.main import is_isogram
         "String with no repeating letters is an isogram",
         "String with repeating letters is not an isogram",
         "String with the same letters in different cases is not an isogram",
+        "String with the same letters in different cases is not an isogram",
         "Empty string is an isogram",
     ]
 )
