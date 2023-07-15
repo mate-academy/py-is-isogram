@@ -10,4 +10,4 @@ def test_empty_string_is_an_isogram() -> None:
 
 
 def test_only_non_consecutive_letters_are_not_isogram() -> None:
-    assert is_isogram("abcd") is False
+    assert is_isogram("aabcd") is False
