@@ -8,7 +8,8 @@ from app.main import is_isogram
     "word, result",
     [
         ("Word", True),
-        ("ComPuter", True)
+        ("ComPuter", True),
+        ("", True)
     ]
 )
 def test_should_return_true(word: str, result: bool) -> None:
@@ -20,7 +21,8 @@ def test_should_return_true(word: str, result: bool) -> None:
     "word, result",
     [
         ("Success", False),
-        ("OcLock", False)
+        ("OcLock", False),
+        ("Oo", False)
     ]
 )
 def test_should_return_false(word: str, result: bool) -> None:
