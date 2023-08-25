@@ -1,7 +1,5 @@
 from app.main import is_isogram
 
-import pytest
-
 
 def test_should_accept_empty_string() -> None:
     assert is_isogram("") is True
