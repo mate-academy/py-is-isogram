@@ -26,5 +26,5 @@ from app.main import is_isogram
         pytest.param("", True, id="should return true if an empty string"),
     ],
 )
-def test_is_isogram(string, result) -> None:
+def test_is_isogram(string: str, result: bool) -> None:
     assert is_isogram(string) == result
