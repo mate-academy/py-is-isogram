@@ -16,5 +16,5 @@ from app.main import is_isogram
         pytest.param("", True)
     ]
 )
-def test_is_isogram_correct(input_word: str, expected_result: bool):
+def test_is_isogram_correct(input_word: str, expected_result: bool) -> None:
     assert is_isogram(input_word) == expected_result
