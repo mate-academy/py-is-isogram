@@ -1,3 +1,20 @@
+import pytest
+
+
 from app.main import is_isogram
 
-# write your code here
+
+@pytest.mark.parametrize(
+    "initial_string,expected_output",
+    [
+        ("", True),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False)
+    ]
+)
+def test_empty_string_should_be_isogram(
+        initial_string,
+        expected_output
+) -> None:
+    assert is_isogram(initial_string) == expected_output
