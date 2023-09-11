@@ -1,7 +1,7 @@
 from app.main import is_isogram
 
 
-def test_is_isogram_true():
+def test_is_isogram_true() -> None:
     assert is_isogram("playgrounds") is True
 
 
