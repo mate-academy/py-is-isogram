@@ -6,7 +6,7 @@ import pytest
     ("hello", False),
     ("world", True),
     ("python", True),
-    ("IsOgrAm", False),
+    ("IsOgrAm", True),
     ("", True),
     ("aa", False),
     ("12345", True),
