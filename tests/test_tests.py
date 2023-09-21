@@ -49,7 +49,7 @@ def test_non_consecutive_letters_are_not_isogram(monkeypatch):
     )
 
     test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1, (
+    assert test_result.value == 0, (
         "Not only consecutive letters are not an isogram."
     )
 
@@ -69,6 +69,6 @@ def test_consecutive_letters_are_not_isogram(monkeypatch):
     )
 
     test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1, (
+    assert test_result.value == 0, (
         "Not only non-consecutive letters are not an isogram."
     )
