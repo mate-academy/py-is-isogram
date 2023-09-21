@@ -30,7 +30,7 @@ def test_non_alpha_characters() -> None:
     word = "12345"
     assert is_isogram(word) is True
 
-# Додаткові тести для перевірки коректності
+
 def test_isogram_with_whitespace() -> None:
     word = "this is an isogram"
     assert is_isogram(word) is False
