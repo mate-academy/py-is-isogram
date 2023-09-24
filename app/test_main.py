@@ -12,7 +12,7 @@ def test_isogram_lowercase() -> None:
 
 
 def test_isogram_uppercase() -> None:
-    word = "ISOGram"
+    word = "ISOGRAM"
     assert is_isogram(word) is True
 
 
