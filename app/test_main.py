@@ -1,3 +1,4 @@
+import pytest
 from app.main import is_isogram
 
 
@@ -39,3 +40,8 @@ def test_isogram_with_hyphen() -> None:
 def test_isogram_with_apostrophe() -> None:
     word = "I'm"
     assert is_isogram(word) is True
+
+
+def test_non_consecutive_letters_are_not_isogram() -> None:
+    word = "hello"
+    assert not is_isogram(word), "Word with non-consecutive letters should not be an isogram"
