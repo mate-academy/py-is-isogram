@@ -11,7 +11,6 @@ def test_isogram_lowercase() -> None:
     assert is_isogram(word) is True
 
 
-
 def test_non_isogram() -> None:
     word = "hello"
     assert is_isogram(word) is False
