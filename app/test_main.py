@@ -44,4 +44,5 @@ def test_isogram_with_apostrophe() -> None:
 
 def test_non_consecutive_letters_are_not_isogram() -> None:
     word = "hello"
-    assert not is_isogram(word), "Word with non-consecutive letters should not be an isogram"
+    assert not is_isogram(word), "Word with non-consecutive " \
+                                 "letters should not be an isogram"
