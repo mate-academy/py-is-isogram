@@ -7,7 +7,11 @@ import pytest
     [
         ("son", True),
         ("boy", True),
-        ("banana", False)
+        ("banana", False),
+        ("", True),
+        ("Adam", False),
+        ("look", False),
+        ("playgrounds", True)
     ],
 )
 def test_is_isogram(word: str, result: bool) -> None:
