@@ -13,7 +13,11 @@ class TestIsIsogram:
             ("", True),
         ]
     )
-    def test_should_return_correct_statement(self, word: str, expected_result: bool) -> None:
+    def test_should_return_correct_statement(
+            self,
+            word: str,
+            expected_result: bool
+    ) -> None:
         assert is_isogram(word) == expected_result
 
     @pytest.mark.parametrize(
@@ -26,6 +30,6 @@ class TestIsIsogram:
             4.3
         ]
     )
-    def test_should_raise_error(self, word: Any):
+    def test_should_raise_error(self, word: Any) -> None:
         with pytest.raises(AttributeError):
             is_isogram(word)
