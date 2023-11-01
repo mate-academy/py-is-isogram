@@ -1,6 +1,6 @@
 def is_isogram(word: str) -> bool:
-    word_lower = word.lower()
-    for letter in word_lower:
-        if word_lower.count(letter) > 1:
-            return False
-    return True
+    # Convert the word to lowercase to make it case-insensitive
+    word = word.lower()
+
+    # Check if there are any repeating letters
+    return len(word) == len(set(word))
