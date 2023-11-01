@@ -13,13 +13,16 @@ def test_isogram_is_case_insensitive(monkeypatch, word, expected):
     monkeypatch.setattr(main, "is_isogram", case_sensitive_isogram)
 
     test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 0, f"String with different cases of the same letter is not an isogram. Input: {word}, Expected: {expected}"
+    assert test_result.value == 0, \
+        f"String with different cases of the same letter is not an isogram. " \
+                                   f"Input: {word}, Expected: {expected}"
 
 
 @pytest.mark.parametrize("word, expected", [("", True), ("abc", True)])
 def test_empty_string_is_isogram(monkeypatch, word, expected):
     def only_empty_string_is_isogram(word):
         return word == ""
+
 
     monkeypatch.setattr(main, "is_isogram", only_empty_string_is_isogram)
 
