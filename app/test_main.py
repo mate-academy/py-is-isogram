@@ -18,12 +18,12 @@ from app.main import is_isogram
         ),
         pytest.param(
             "look",
-            True,
+            False,
             id="check if func return False with not isogram string"
         ),
         pytest.param(
             "Adam",
-            True,
+            False,
             id="check if func return False with not isogram string"
         ),
     ]
