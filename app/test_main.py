@@ -7,14 +7,14 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("playgrounds" is True),
-        ("Playground" is True),
-        ("look" is False),
-        ("Adam" is False),
-        ("" is True)
+        ("playgrounds", True),
+        ("Playground", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True)
     ]
 )
-def is_isogram(
+def test_is_isogram(
         word: str,
         expected: bool
 ) -> None:
