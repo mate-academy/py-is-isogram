@@ -1,3 +1,31 @@
+import pytest
+
 from app.main import is_isogram
 
-# write your code here
+
+class TestIsIsogram:
+    @pytest.mark.parametrize(
+        "word,result",
+        [
+            ("playgrounds", True),
+            ("look", False),
+            ("Adam", False),
+            ("1234", True),
+            ("", True)
+        ]
+    )
+    def test_input_word(self, word, result):
+        assert is_isogram(word) == result
+
+    @pytest.mark.parametrize(
+        "word",
+        [
+            pytest.param(1,id="input 'int' type"),
+            pytest.param({"": "123"},id="input 'dict' type",),
+            pytest.param((1, 2, 3, 4), id="input 'tuple' type")
+
+        ]
+    )
+    def test_unexpected_type(self, word):
+        with pytest.raises(AttributeError):
+            is_isogram(word)
