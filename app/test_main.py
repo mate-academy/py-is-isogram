@@ -38,7 +38,7 @@ from app.main import is_isogram
     ]
 )
 def test_calculation_correctly(
-        word: int,
+        word: str,
         result: bool
 ) -> None:
     assert is_isogram(word) == result
