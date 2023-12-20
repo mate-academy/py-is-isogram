@@ -4,7 +4,7 @@ import pytest
 from app.main import is_isogram
 
 
-class IsIsogram:
+class TestIsIsogram:
     @pytest.mark.parametrize(
         "word, result",
         [
@@ -12,7 +12,7 @@ class IsIsogram:
             ("look", False),
             ("Adam", False),
             ("", True),
-            ("Aa", False),
+            ("Aa", False)
         ]
     )
     def test_is_isogram(self, word: str, result: bool) -> None:
