@@ -2,8 +2,8 @@ import pytest
 
 from app.main import is_isogram
 
-class TestIsIsogram:
 
+class TestIsIsogram:
     @pytest.mark.parametrize(
         "input_word, is_iso",
         [
