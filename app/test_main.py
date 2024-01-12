@@ -33,7 +33,7 @@ class TestIsIsogram:
     )
     def test_should_return_correct_boolean_value(
             self,
-            input_string,
-            expected_result
+            input_string: str,
+            expected_result: bool
     ) -> None:
         assert is_isogram(input_string) is expected_result
