@@ -28,5 +28,9 @@ class TestResultsIsIsogram:
             ),
         ],
     )
-    def test_isogram_on_correct_answer(self, given_word: str, expected_output: bool) -> None:
+    def test_isogram_on_correct_answer(
+            self,
+            given_word: str,
+            expected_output: bool
+    ) -> None:
         assert is_isogram(given_word) == expected_output
