@@ -1,3 +1,39 @@
 from app.main import is_isogram
+from pytest import mark, param
 
-# write your code here
+
+class TestIsIsogram:
+    @mark.parametrize(
+        "input_string, expected_result",
+        [
+            param(
+                "",
+                True,
+                id="Empty string should be an isogram",
+            ),
+
+            param(
+                "playgrounds",
+                True,
+                id="Word with no repeating letters should be an isogram",
+            ),
+
+            param(
+                "Adam",
+                False,
+                id="Should be case insensitive",
+            ),
+
+            param(
+                "look",
+                False,
+                id="Letters must not be repeated",
+            )
+        ]
+    )
+    def test_should_return_correct_boolean_value(
+            self,
+            input_string,
+            expected_result
+    ) -> None:
+        assert is_isogram(input_string) is expected_result
