@@ -15,10 +15,10 @@ class TestIsIsogram:
             ("a", True),  # Single letter is considered an isogram
         ],
     )
-    def test_is_isogram(self, word, expected_result):
+    def test_is_isogram(self, word: str, expected_result: bool) -> None:
         assert is_isogram(word) == expected_result
 
-    def test_is_isogram_edge_case(self):
+    def test_is_isogram_edge_case(self) -> None:
         # Test an edge case with a long word (100 characters)
         long_word = "abcdefghij" * 10
-        assert is_isogram(long_word) == False
+        assert is_isogram(long_word) is False
