@@ -11,7 +11,7 @@ class TestIsIsogram:
             ("Adam", False),
             ("", True),
             ("AaBbCc", False),  # Not an isogram (case-insensitive)
-            ("unique", True),
+            ("unique", False),
             ("a", True),  # Single letter is considered an isogram
         ],
     )
