@@ -2,31 +2,23 @@ from app.main import is_isogram
 import pytest
 
 
-class TestResultIsIsogram:
+class TestIsIsogram:
     @pytest.mark.parametrize(
-        "given_word,expected_output",
+        "word, expected_result",
         [
-            pytest.param(
-                "pool",
-                False,
-                id="check lowercase not isogram"
-            ),
-            pytest.param(
-                "",
-                True,
-                id="check empty string is isogram"
-            ),
-            pytest.param(
-                "Carmen",
-                True,
-                id="check isogram on the right answer"
-            ),
-            pytest.param(
-                "Squids",
-                False,
-                id="check case-insensitive not isogram"
-            ),
+            ("playgrounds", True),
+            ("look", False),
+            ("Adam", False),
+            ("", True),
+            ("AaBbCc", False),  # Not an isogram (case-insensitive)
+            ("unique", True),
+            ("a", True),  # Single letter is considered an isogram
         ],
     )
-    def test_is_isogram(self, given_word, expected_output):
-        assert is_isogram(given_word) == expected_output
+    def test_is_isogram(self, word, expected_result):
+        assert is_isogram(word) == expected_result
+
+    def test_is_isogram_edge_case(self):
+        # Test an edge case with a long word (100 characters)
+        long_word = "abcdefghij" * 10
+        assert is_isogram(long_word) == False
