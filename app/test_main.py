@@ -11,6 +11,9 @@ import pytest
         ("", True)
     ]
 )
-def test_isogram_is_detected_correctly(input_string: str, result: bool) -> None:
+def test_isogram_is_detected_correctly(
+        input_string: str,
+        result: bool
+) -> None:
     assert is_isogram(input_string) == result, \
         "Function should determine isogram correctly!"
