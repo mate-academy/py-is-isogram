@@ -13,6 +13,7 @@ from app.main import is_isogram
 def test_isogram_with_isogram_word(word: str) -> None:
     assert is_isogram(word)
 
+
 @pytest.mark.parametrize(
     "word",
     [
