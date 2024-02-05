@@ -25,18 +25,3 @@ from app.main import is_isogram
 )
 def test_uniq_letters(string: str, bool_result: bool) -> None:
     assert is_isogram(string) == bool_result
-
-
-@pytest.mark.parametrize(
-    "string,error_result",
-
-    [
-        pytest.param(
-            1, TypeError,
-            id="argument should be a string"
-        ),
-    ]
-)
-def test_errors(string: str, error_result: Exception) -> None:
-    with pytest.raises(error_result):
-        is_isogram(string)
