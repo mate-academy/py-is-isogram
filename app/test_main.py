@@ -21,7 +21,7 @@ class TestIsIsogramWords:
             self,
             word: str,
             result: bool
-    ):
+    ) -> None:
         assert (is_isogram(word) == result)
 
 
@@ -39,6 +39,6 @@ class TestIsIsogramTypes:
             self,
             word: Any,
             error: Type[Exception]
-    ):
+    ) -> None:
         with pytest.raises(error):
             is_isogram(word)
