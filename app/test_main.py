@@ -2,7 +2,6 @@ from app.main import is_isogram
 import pytest
 
 
-
 class TestIsIsonfram:
     @pytest.mark.parametrize(
         "word, boolian",
@@ -33,6 +32,8 @@ class TestIsIsonfram:
             "word must be str"
         ],
     )
-    def test_errors_for_int_values(self, word: str, error: AttributeError) -> None:
+    def test_errors_for_int_values(self,
+                                   word: str,
+                                   error: AttributeError) -> None:
         with pytest.raises(error):
             is_isogram(word)
