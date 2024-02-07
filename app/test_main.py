@@ -1,5 +1,7 @@
 import pytest
+
 from app.main import is_isogram
+
 
 class TestIsIsogram:
     @pytest.mark.parametrize(
@@ -11,6 +13,6 @@ class TestIsIsogram:
             ("Adam", False),
         ]
     )
-    def test_is_isogram(self, string, expected):
+    def test_is_isogram(self, string: str, expected: bool) -> None:
         result = is_isogram(string)
         assert result == expected
