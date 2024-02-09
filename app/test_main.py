@@ -1,3 +1,5 @@
 from app.main import is_isogram
 
-# write your code here
+
+def test_empty_string_is_isogram() -> None:
+    assert is_isogram("") == True
