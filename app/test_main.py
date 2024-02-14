@@ -5,13 +5,13 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word_input,result",
     [
-        pytest.param("playgrounds".lower(), True,
+        pytest.param("playgrounds", True,
                      id="Test an isogram word."),
-        pytest.param("".lower(), True,
+        pytest.param("", True,
                      id="Test an empty string."),
-        pytest.param("Adam".lower(), False,
+        pytest.param("Adam", False,
                      id="Test a non isogram word."),
-        pytest.param("look".lower(), False,
+        pytest.param("look", False,
                      id="Test a non isogram word.")
     ]
 )
