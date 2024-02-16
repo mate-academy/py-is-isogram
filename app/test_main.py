@@ -19,9 +19,12 @@ def test_should_return_true(word: str, expected: bool) -> None:
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("rruujhjh", False),
-        ("wwwww", False),
-        ("qqqqqqqq", False)
+        pytest.param("rruujhjh", False,
+                     id="Is not isogram"),
+        pytest.param("wwwww", False,
+                     id="Is not isogram"),
+        pytest.param("qqqqqqqq", False,
+                     id="Is not isogram")
     ]
 )
 def test_should_return_false(word: str, expected: bool) -> None:
