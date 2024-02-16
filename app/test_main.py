@@ -4,32 +4,31 @@ from app.main import is_isogram
 
 
 @pytest.mark.parametrize(
-    "word, expected",
+    "word, expected_result",
     [
-        pytest.param("qwertyuiop", True,
-                     id="Should return true for qwertyuiop word"),
-        pytest.param("asdfghjkl", True,
-                     id="Should return true for asdfghjkl word"),
-        pytest.param("zxcvbnm", True,
-                     id="Should return true for zxcvbnm word"),
-        pytest.param("", True,
-                     id="Should return true for empty word")
+        pytest.param(
+            "", True,
+            id="should return True for empty string"
+        ),
+        pytest.param(
+            "abc", True,
+            id="should return True for if string is isogram"
+        ),
+        pytest.param(
+            "abca", False,
+            id="should return False for if string is not isogram"
+        ),
+        pytest.param(
+            "a b c", False,
+            id="should work with spaces"
+        ),
+        pytest.param(
+            "Abca", False,
+            id="should work with uppercase letters"
+        ),
     ]
 )
-def test_should_return_true(word: str, expected: bool) -> None:
-    assert is_isogram(word) == expected
+def test_is_isogram(word: str, expected_result: bool) -> None:
+    result = is_isogram(word)
 
-
-@pytest.mark.parametrize(
-    "word, expected",
-    [
-        pytest.param("rruujhjh", False,
-                     id="Is not isogram"),
-        pytest.param("wwwww", False,
-                     id="Is not isogram"),
-        pytest.param("qqqqqqqq", False,
-                     id="Is not isogram")
-    ]
-)
-def test_should_return_false(word: str, expected: bool) -> None:
-    assert is_isogram(word) == expected
+    assert result == expected_result
