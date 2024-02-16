@@ -6,10 +6,14 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("qwertyuiop", True),
-        ("asdfghjkl", True),
-        ("zxcvbnm", True),
-        ("", True)
+        pytest.param("qwertyuiop", True,
+                     id="Should return true for qwertyuiop word"),
+        pytest.param("asdfghjkl", True,
+                     id="Should return true for asdfghjkl word"),
+        pytest.param("zxcvbnm", True,
+                     id="Should return true for zxcvbnm word"),
+        pytest.param("", True,
+                     id="Should return true for empty word")
     ]
 )
 def test_should_return_true(word: str, expected: bool) -> None:
