@@ -9,7 +9,7 @@ from app.main import is_isogram
         ("playgrounds", True),
         ("look", False),
         ("Adam", False),
-        (" ", True),
+        ("", True),
         ("love", True),
     ]
 )
