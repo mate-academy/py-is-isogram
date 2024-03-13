@@ -1,5 +1,3 @@
-import traceback
-
 import pytest
 from app.main import is_isogram
 
@@ -30,6 +28,5 @@ class TestIsogramParam:
             )
         ]
     )
-
     def test_correct_return(self, word: str, expected: bool) -> None:
         assert is_isogram(word) is expected
