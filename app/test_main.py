@@ -1,5 +1,4 @@
 import pytest
-from typing import Type
 
 from app.main import is_isogram
 
@@ -15,7 +14,7 @@ from app.main import is_isogram
     ids=[
         "empty string should return True",
         "if letter is repeated should return False",
-        "function should be case-insensitive ((M and m are considered the same letter)",
+        "function should be case-insensitive",
         "If the letters are not repeated should return True"
     ]
 )
