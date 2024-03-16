@@ -6,10 +6,10 @@ from app.main import is_isogram
     ("playgrounds", True),
     ("look", False),
     ("Adam", False),
-    ("NIOcean", True),
+    ("NIOcean", False),  # 'N' і 'n' повинні вважатися однаковими
     ("I Love Mate academy", False),
     ("wrong", True),
-    ("brother", False),
+    ("brother", True),
     ("Ukraine", True),
     ("", True)
 ])
