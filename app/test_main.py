@@ -1,5 +1,4 @@
 from app.main import is_isogram
-import pytest
 
 
 def test_right() -> None:
