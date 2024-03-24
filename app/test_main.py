@@ -14,4 +14,4 @@ import pytest
     ]
 )
 def test_isograms_return_true(isogram: str, result: bool) -> None:
-    assert is_isogram("") is result
+    assert is_isogram(isogram) is result
