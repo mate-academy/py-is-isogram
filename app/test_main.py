@@ -1,6 +1,7 @@
 from app.main import is_isogram
 import pytest
 
+
 @pytest.mark.parametrize(
     "test_input,expected_bool", [
         ("aaa", False),
