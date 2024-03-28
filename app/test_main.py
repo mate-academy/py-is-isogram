@@ -14,7 +14,7 @@ from app.main import is_isogram
         pytest.param("playgrounds", True,
                      id="'playgrounds' is an isogram"),
         pytest.param(" ", True,
-                     id="gap is an isogram"),
+                     id="gap is an  isogram"),
     ]
 )
 def test_should_return_proper_coin_combination(word: str,
