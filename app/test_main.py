@@ -13,10 +13,11 @@ def test_is_instance_is_isogram() -> None:
         ("isogram", True),
         ("playgrounds", True),
         ("Adam", False),
+        ("look", False),
         (" ", True),
-        ("121", False),
+        ("", True),
         ("123", True),
-        ("look", False)
+        ("121", False)
     ]
 )
 def test_is_isogram(word: str, expected: bool) -> None:
