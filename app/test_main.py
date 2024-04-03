@@ -1,6 +1,6 @@
 from app.main import is_isogram
 
-# write your code here
+
 def test_isogram_true() -> None:
     assert is_isogram("playgrounds")
 
