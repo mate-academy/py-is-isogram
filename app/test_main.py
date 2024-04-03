@@ -19,4 +19,3 @@ from app.main import is_isogram
 )
 def test_get_coin_combination(word: str, expected: bool) -> None:
     assert is_isogram(word) is expected
-
