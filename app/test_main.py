@@ -5,6 +5,7 @@ def test_when_a_word_is_an_isgram() -> None:
     result = (is_isogram("playgrounds"))
     assert result is True
 
+
 def test_when_a_word_is_not_an_isgram() -> None:
     result = (is_isogram("look"))
     assert result is False
