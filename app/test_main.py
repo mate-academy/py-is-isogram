@@ -20,6 +20,4 @@ from app.main import is_isogram
                                   "letters are the same"),
 ])
 def test_is_isogram(word: str, expected_boolean_value: bool) -> None:
-    assert (
-            is_isogram(word) == expected_boolean_value
-    )
+    assert (is_isogram(word) == expected_boolean_value)
