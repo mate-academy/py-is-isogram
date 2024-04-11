@@ -15,4 +15,3 @@ def test_case_sensitive() -> None:
 
 def test_empty() -> None:
     assert is_isogram("")
-    
