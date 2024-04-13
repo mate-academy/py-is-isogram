@@ -10,12 +10,14 @@ class TestIsIsogram:
             "look, False",
             "Adam, False",
             "'', True",
+            "Playground, True"
         ],
         ids=[
             "test should return True when word is isogram",
             "test should return False when word is not isogram",
             "String with different cases of the same letter is not an isogram",
             "empty string is isogram"
+            "String with different cases of the different letters is an isogram"
         ]
     )
     def test_is_isogram(self,
