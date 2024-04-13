@@ -6,11 +6,11 @@ class TestIsIsogram:
     @pytest.mark.parametrize(
         "word,result",
         [
-            "playground, True",
-            "look, False",
-            "Adam, False",
-            "'', True",
-            "Playground, True"
+            ("playground", True),
+            ("look", False),
+            ("Adam", False),
+            ("", True),
+            ("Playground", True)
         ],
         ids=[
             "test should return True when word is isogram",
