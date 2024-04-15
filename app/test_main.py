@@ -20,5 +20,5 @@ from app.main import is_isogram
         "test no repeating letters with lower-case"
     ]
 )
-def test_letters_for_isogram(test_word: str, result: bool):
+def test_letters_for_isogram(test_word: str, result: bool) -> None:
     assert is_isogram(test_word) == result
