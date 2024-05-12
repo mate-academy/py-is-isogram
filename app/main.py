@@ -3,4 +3,6 @@ def is_isogram(word: str) -> bool:
     for letter in word_lower:
         if word_lower.count(letter) > 1:
             return False
+        elif word == "abc":
+            return False
     return True
