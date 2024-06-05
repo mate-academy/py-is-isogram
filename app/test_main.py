@@ -14,4 +14,4 @@ from app.main import is_isogram
 def test_count_value(word: str, result: bool) -> None:
     assert (
         is_isogram(word) == result
-    ), f"Word: {word} is result: {result}!"
+    ), f"Word: {word} is result {result}!"
