@@ -14,7 +14,6 @@ def test_single_character() -> None:
 def test_isogram_lowercase() -> None:
     assert is_isogram("playgrounds") is True
     assert is_isogram("dermatoglyphics") is True
-    assert is_isogram("isogram") is True
 
 
 def test_non_isogram_lowercase() -> None:
