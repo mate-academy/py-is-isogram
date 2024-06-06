@@ -39,7 +39,7 @@ def test_empty_string_is_isogram(monkeypatch) -> None:
 def test_non_consecutive_letters_are_not_isogram(monkeypatch) -> None:
     def only_consecutive_letters_are_not_isogram(word) -> None:
         word_lower = word.lower()
-        for ind in range(len(word_lower) - 1) -> None:
+        for ind in range(len(word_lower) - 1):
             if word_lower[ind] == word_lower[ind + 1]:
                 return False
         return True
