@@ -57,10 +57,10 @@ def test_non_consecutive_letters_are_not_isogram(monkeypatch) -> None:
 def test_consecutive_letters_are_not_isogram(monkeypatch) -> None:
     def only_non_consecutive_letters_are_not_isogram(word) -> None:
         word_lower = word.lower()
-        for ind in range(1, len(word_lower) - 1) -> None:
+        for ind in range(1, len(word_lower) - 1):
             if (word_lower.count(word_lower[ind]) >= 2 and
                     not (word_lower[ind] == word_lower[ind + 1] or
-                         word_lower[ind] == word_lower[ind - 1])) -> None:
+                         word_lower[ind] == word_lower[ind - 1])):
                 return False
         return True
 
