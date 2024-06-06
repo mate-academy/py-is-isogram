@@ -3,8 +3,8 @@ import pytest
 from app import main
 
 
-def test_isogram_is_case_insensitive(monkeypatch):
-    def case_sensitive_isogram(word: str):
+def test_isogram_is_case_insensitive(monkeypatch) -> None:
+    def case_sensitive_isogram(word: str) -> bool:
         for letter in word:
             if word.count(letter) > 1:
                 return False
@@ -18,8 +18,8 @@ def test_isogram_is_case_insensitive(monkeypatch):
     )
 
 
-def test_empty_string_is_isogram(monkeypatch):
-    def non_empty_string_isogram(word: str):
+def test_empty_string_is_isogram(monkeypatch) -> None:
+    def non_empty_string_isogram(word: str) -> bool:
         if word == "":
             return False
         word_lower = word.lower()
@@ -36,8 +36,8 @@ def test_empty_string_is_isogram(monkeypatch):
     )
 
 
-def test_non_consecutive_letters_are_not_isogram(monkeypatch):
-    def only_consecutive_letters_are_not_isogram(word):
+def test_non_consecutive_letters_are_not_isogram(monkeypatch) -> None:
+    def only_consecutive_letters_are_not_isogram(word) -> None:
         word_lower = word.lower()
         for ind in range(len(word_lower) - 1):
             if word_lower[ind] == word_lower[ind + 1]:
@@ -54,8 +54,8 @@ def test_non_consecutive_letters_are_not_isogram(monkeypatch):
     )
 
 
-def test_consecutive_letters_are_not_isogram(monkeypatch):
-    def only_non_consecutive_letters_are_not_isogram(word):
+def test_consecutive_letters_are_not_isogram(monkeypatch) -> None:
+    def only_non_consecutive_letters_are_not_isogram(word) -> None:
         word_lower = word.lower()
         for ind in range(1, len(word_lower) - 1):
             if (word_lower.count(word_lower[ind]) >= 2 and
