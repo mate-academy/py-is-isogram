@@ -9,7 +9,7 @@ import pytest
     "word, result",
     [
         ("playgrounds", True),
-        ('look', False),
+        ("look", False),
         ("Adam", False),
         ("", True),
     ],
