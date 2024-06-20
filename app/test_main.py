@@ -9,6 +9,7 @@ import pytest
         ("Downstream", True),
         ("lumberjacks", True),
         ("isogram", True),
+        ("", True),
         ("Google", False),
         ("Community", False),
         ("System", False),
