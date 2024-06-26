@@ -12,5 +12,5 @@ from app.main import is_isogram
         ("Adam", False)
     ]
 )
-def test(word: str, result: bool):
+def test(word: str, result: bool) -> None:
     assert is_isogram(word) == result
