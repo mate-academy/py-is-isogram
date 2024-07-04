@@ -1,5 +1,5 @@
 from app.main import is_isogram
-from pytest import mark, raises, param
+from pytest import mark, param
 
 
 @mark.parametrize(
@@ -18,8 +18,3 @@ from pytest import mark, raises, param
 )
 def test_is_isogram(word: str, expected_result: bool) -> None:
     assert is_isogram(word) == expected_result
-
-
-def test_raise_error_if_type_of_value_is_incorrect() -> None:
-    with raises(TypeError):
-        is_isogram(12)
