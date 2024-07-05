@@ -5,10 +5,10 @@ import pytest
 @pytest.mark.parametrize(
     "word, result",
     [
-        ('playgrounds', True),
-        ('look', False),
-        ('Adam', False),
-        ('', True),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True),
     ]
 )
 def test_is_isogram(word: str, result: bool) -> None:
