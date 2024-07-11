@@ -7,10 +7,10 @@ class TestIsIsogram:
     @pytest.mark.parametrize(
         "word,expected_bool",
         (
-                ("playgrounds", True),
-                ("look", False),
-                ("Adam", False),
-                ("", True),
+            ("playgrounds", True),
+            ("look", False),
+            ("Adam", False),
+            ("", True),
         )
     )
     def test_is_isogram(self, word: str, expected_bool: bool) -> None:
