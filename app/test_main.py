@@ -13,7 +13,9 @@ from app.main import is_isogram
             id="should return False for letters with different cases",
         ),
         pytest.param("", True, id="should return True for empty string"),
-        pytest.param("aaa", False, id="should return False for consecutive letters"),
+        pytest.param(
+            "aaa", False, id="should return False for consecutive letters"
+        ),
     ],
 )
 def test_should_return_correct_results(
