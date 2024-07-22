@@ -15,5 +15,5 @@ from app.main import is_isogram
         ("css", False)
     ]
 )
-def test_correct_isogram_determination(word, result) -> None:
+def test_correct_isogram_determination(word: str, result: bool) -> None:
     assert is_isogram(word) == result
