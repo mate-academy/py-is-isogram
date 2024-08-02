@@ -15,4 +15,3 @@ def test_is_isogram() -> None:
     assert is_isogram("thumbscrew-japingly") is False
     assert is_isogram("moOse") is False
     assert is_isogram("aba") is False
-
