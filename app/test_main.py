@@ -2,13 +2,14 @@ import pytest
 
 from app.main import is_isogram
 
+
 class TestIsIsogram:
     @pytest.mark.parametrize(
         "word_to_check, is_word_isogram",
         [
-            ('playgrounds', True),
-            ('look', False),
-            ('Adam', False),
+            ("playgrounds", True),
+            ("look", False),
+            ("Adam", False),
             ("", True)
         ]
     )
