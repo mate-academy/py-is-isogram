@@ -1,7 +1,19 @@
+import pytest
+
 from app.main import is_isogram
 
-def test_is_isogram() -> None:
-    assert is_isogram("playgrounds")
-    assert not is_isogram("look")
-    assert not is_isogram("Adam")
-    assert is_isogram("")
+
+@pytest.mark.parametrize(
+    "word, result",
+    [
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True)
+    ]
+)
+def test_should_return_result(
+        word: str,
+        result: bool
+) -> None:
+    assert is_isogram(word) == result
