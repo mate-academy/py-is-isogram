@@ -7,10 +7,10 @@ class TestIso:
         "string,expected",
         [
             ("", True),
-            ("playground", True),
+            ("playgrounds", True),
             ("look", False),
-            ("adam", False)
+            ("Adam", False)
         ]
     )
-    def test_is_isogram(self, string: str, expected: bool) -> None:
+    def test_cases(self, string: str, expected: bool) -> None:
         assert is_isogram(string) == expected
