@@ -1,9 +1,10 @@
 import pytest
 from app.main import is_isogram
 
+
 class TestIsIsogram:
     @pytest.mark.parametrize(
-         "word,expected",
+        "word,expected",
         [
             pytest.param("playgrounds", True),
             pytest.param("look", False),
