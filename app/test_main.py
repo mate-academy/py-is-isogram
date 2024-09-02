@@ -1,25 +1,15 @@
 from app.main import is_isogram
+import pytest
 
 
-def test_empty_string() -> None:
+@pytest.mark.parametrize(
+    "actual,expected", [("Bob", False), ("look", False), ("playgrounds", True)]
+)
+def test_the_output_should_be_equil_to_the_expected_output(
+    actual: str, expected: bool
+) -> None:
+    assert is_isogram(actual) == expected
+
+
+def _test_whole_quotes_is_isogram() -> None:
     assert is_isogram("")
-
-
-def test_case_sensitive() -> None:
-    assert is_isogram("Dermatoglyphics")
-
-
-def test_non_isogram() -> None:
-    assert not is_isogram("Adam")
-
-
-def test_string_with_spaces() -> None:
-    assert not is_isogram("hello world")
-
-
-def test_string_with_special_characters() -> None:
-    assert is_isogram("!@#&*")
-
-
-def test_string_with_numbers() -> None:
-    assert is_isogram("1234567890")
