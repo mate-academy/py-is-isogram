@@ -11,5 +11,5 @@ def test_the_output_should_be_equil_to_the_expected_output(
     assert is_isogram(actual) == expected
 
 
-def _test_whole_quotes_is_isogram() -> None:
-    assert is_isogram("")
+def test_whole_quotes_is_isogram() -> None:
+    assert is_isogram("") is True
