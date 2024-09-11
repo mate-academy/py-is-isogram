@@ -16,7 +16,8 @@ from app.main import is_isogram
         ),
         pytest.param(
             "Adam", False,
-            id="should be False with case-sensetive word and letters dublicate",
+            id="should be False with case-sensetive word \
+                and letters dublicate",
         ),
         pytest.param(
             "", True,
