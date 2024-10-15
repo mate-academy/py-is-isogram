@@ -30,12 +30,12 @@ class TestIsIsogram:
     @pytest.mark.parametrize(
         "input_data, error",
         [
-            (1, TypeError),
-            (True, TypeError)
+            (1, AttributeError),
+            (True, AttributeError)
         ],
         ids=[
-            "1 should be raised TypeError",
-            "True should be raised TypeError"
+            "1 should be raised AttributeError",
+            "True should be raised AttributeError"
         ]
     )
     def test_raising_errors_for_is_isogram(
