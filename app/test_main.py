@@ -2,6 +2,7 @@ import pytest
 
 from app.main import is_isogram
 
+
 class TestIsIsogram:
 
     @pytest.mark.parametrize(
@@ -30,4 +31,3 @@ class TestIsIsogram:
     def test_(self, word: any, expected_error: Exception) -> None:
         with pytest.raises(expected_error):
             is_isogram(word)
-
