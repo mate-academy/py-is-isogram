@@ -4,3 +4,6 @@ def is_isogram(word: str) -> bool:
         if word_lower.count(letter) > 1:
             return False
     return True
+
+
+print(is_isogram("people"))
