@@ -11,7 +11,7 @@ from app.main import is_isogram
         ("", True),             # empty string is an isogram
         ("qwertyuio", True),    # all unique letters
         ("A", True),            # single letter is an isogram
-        ("Aa", True),           # upper and lowercase letter
+        ("Aa", False),           # upper and lowercase letter
         ("mate", True),         # no repeating letters
     ],
     ids=[
