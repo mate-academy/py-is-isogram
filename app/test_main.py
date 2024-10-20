@@ -1,4 +1,3 @@
-from app.main import is_isogram
 import pytest
 from app.main import is_isogram
 
@@ -16,5 +15,5 @@ from app.main import is_isogram
         ("Dermatoglyphics", True),
     ]
 )
-def test_is_isogram(word, expected_result):
+def test_is_isogram(word: str, expected_result: bool) -> bool:
     assert is_isogram(word) == expected_result
