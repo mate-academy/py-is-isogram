@@ -2,10 +2,10 @@ from app.main import is_isogram
 
 
 def test_is_isogram() -> None:
-    assert is_isogram("playgrounds") == True
-    assert is_isogram("look") == False
-    assert is_isogram("Adam") == False
-    assert is_isogram("") == True
-    assert is_isogram("isogram") == True
-    assert is_isogram("subdermatoglyphic") == True
-    assert is_isogram("Alphabet") == False
+    assert is_isogram("playgrounds")
+    assert not is_isogram("look")
+    assert not is_isogram("Adam")
+    assert is_isogram("")
+    assert is_isogram("isogram")
+    assert is_isogram("subdermatoglyphic")
+    assert not is_isogram("Alphabet")
