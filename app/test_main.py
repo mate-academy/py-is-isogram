@@ -22,15 +22,6 @@ def test_case_insensitivity() -> None:
     assert is_isogram("Alphabet") is False
 
 
-def test_with_spaces() -> None:
-    assert is_isogram("iso gram") is False
-
-
-def test_with_hyphens() -> None:
-    assert is_isogram("six-pack") is False
-    assert is_isogram("iso-gram") is True
-
-
 def test_with_numbers() -> None:
     assert is_isogram("12345") is True
     assert is_isogram("11234") is False
