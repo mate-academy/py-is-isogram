@@ -15,11 +15,3 @@ def test_should_return_false_for_repeating_letters() -> None:
 
 def test_should_return_true_for_empty_string() -> None:
     assert is_isogram("") is True
-
-
-
-
-
-
-
-
