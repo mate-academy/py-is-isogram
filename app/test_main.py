@@ -14,20 +14,20 @@ class TestIsIsogram:
     def test_word_is_isogram(self,
                              input_value: str) -> None:
         result = is_isogram(input_value)
-        assert result == True
+        assert result
 
 
 class TestNotIsogram:
     @pytest.mark.parametrize(
         "input_value",
         [
-            pytest.param('look', id="word don't should be isogram")
+            pytest.param("look", id="word don't should be isogram")
         ]
     )
     def test_word_is_not_isogram(self,
                                  input_value: str) -> None:
         result = is_isogram(input_value)
-        assert result == False
+        assert not result
 
 
 class TestCaseInsensitive:
