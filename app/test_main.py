@@ -10,6 +10,7 @@ from app.main import is_isogram
         ("tree", False),
         ("", True),
         ("playgrounds", True),
+        ("local", False),
     ]
 )
 def test_is_isogram(word: str, result: bool) -> None:
