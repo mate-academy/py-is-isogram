@@ -21,4 +21,4 @@ from app.main import is_isogram
 def test_all_cases(word: str, result: bool) -> None:
     assert (
         is_isogram(word) == result
-    ), f"'{word}' {"should" if result else "shouldn\'t"} be an isogram!"
+    ), f"\'{word}\' {"should" if result else "shouldn\'t"} be an isogram!"
