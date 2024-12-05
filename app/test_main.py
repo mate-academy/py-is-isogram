@@ -12,7 +12,8 @@ class TestIsIsogram:
             ("Sign", True),
             ("Badger", True),
             ("AbCdEfG", True),
-            (" ", True)
+            (" ", True),
+            ("", True),
         ]
     )
     def test_is_isogram(
@@ -28,7 +29,8 @@ class TestIsIsogram:
             ("AAasdweA", False),
             ("qweee", False),
             ("   ", False),
-            ("Phantam", False)
+            ("Phantam", False),
+            ("Aabe", False)
         ]
     )
     def test_is_isogram_false(
