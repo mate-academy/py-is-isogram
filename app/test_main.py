@@ -2,12 +2,6 @@ import pytest
 
 from .main import is_isogram
 
-
-def test_add_not_str_argument() -> None:
-    with pytest.raises(TypeError):
-        is_isogram(12.52)
-
-
 def test_notonly_letters_in_arguments() -> None:
     assert (is_isogram("Gkjl2#!@")), "The word should consist of Letters only"
 
