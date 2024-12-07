@@ -2,6 +2,7 @@ import pytest
 
 from .main import is_isogram
 
+
 def test_notonly_letters_in_arguments() -> None:
     assert (is_isogram("Gkjl2#!@")), "The word should consist of Letters only"
 
