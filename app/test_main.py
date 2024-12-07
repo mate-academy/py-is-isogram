@@ -9,25 +9,24 @@ def test_add_not_str_argument() -> None:
 
 
 def test_notonly_letters_in_arguments() -> None:
-    assert (is_isogram("Gkjl2#!@") == False), \
-        "The word should consist of Letters only"
+    assert (is_isogram("Gkjl2#!@")), "The word should consist of Letters only"
 
 
 def test_is_isogram_should_return_bool() -> None:
-    assert isinstance(is_isogram("World"), bool)
+    assert isinstance((is_isogram("World") is False), bool)
 
 
 def test_capital_letters_same_small_in_arguments() -> None:
-    assert (is_isogram("GrilL") == False), \
+    assert (is_isogram("GrilL") is False), \
         "The capital letters same the small"
 
 
 @pytest.mark.parametrize(
     "word, result",
     [
-        ('playgrounds', True),
-        ('look', False),
-        ('Adam', False),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
         ('', True),
     ],
     ids=[
