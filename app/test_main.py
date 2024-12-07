@@ -27,7 +27,7 @@ def test_capital_letters_same_small_in_arguments() -> None:
         ("playgrounds", True),
         ("look", False),
         ("Adam", False),
-        ('', True),
+        ("", True),
     ],
     ids=[
         "all small letters isogram = True",
