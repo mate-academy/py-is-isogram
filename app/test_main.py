@@ -6,7 +6,7 @@ import pytest
     "word,result",
     [
         pytest.param("playgrounds", True, id="isogram value"),
-        pytest.param('look', False, id="not isogram value"),
+        pytest.param("look", False, id="not isogram value"),
         pytest.param("Adam", False, id="difference cases in words"),
         pytest.param("", True, id="empty string"),
 
