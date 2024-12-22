@@ -11,7 +11,7 @@ from app.main import is_isogram
         ("", True),
         ("phone", True)
     ],
-    ids = [
+    ids=[
         "all_unique_lowercase",
         "repeated_letters",
         "case_insensitive",
