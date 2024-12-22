@@ -7,7 +7,9 @@ def test_is_isogram() -> None:
     assert is_isogram("look") is False, "Test case 'look' failed"
     assert is_isogram("Adam") is False, "Test case 'Adam' failed"
     assert is_isogram("") is True, "Test case empty string failed"
-    assert is_isogram("Dermatoglyphics") is True, "Test case 'Dermatoglyphics' failed"
+    assert is_isogram("Dermatoglyphics") is True, (
+        "Test case 'Dermatoglyphics' failed"
+    )
     assert is_isogram("aba") is False, "Test case 'aba' failed"
     assert is_isogram("moOse") is False, "Test case 'moOse' failed"
     assert is_isogram("abcdefg") is True, "Test case 'abcdefg' failed"
