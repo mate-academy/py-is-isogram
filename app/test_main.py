@@ -7,8 +7,17 @@ from app.main import is_isogram
     [
         ("Mark", True),
         ("playground", True),
-        ("look", False)
+        ("look", False),
+        ("", True),
+        ("phone", True)
     ],
+    ids = [
+        "all_unique_lowercase",
+        "repeated_letters",
+        "case_insensitive",
+        "empty_string",
+        "mixed_case",
+    ]
 )
 def test_for_words(
     word: str,
