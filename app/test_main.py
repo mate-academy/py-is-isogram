@@ -5,9 +5,9 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     ("word", "expected"),
     [
-        ("Mark", (True)),
-        ("playground", (True)),
-        ("look", (False))
+        ("Mark", True),
+        ("playground", True),
+        ("look", False)
     ],
 )
 def test_for_words(
