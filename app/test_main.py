@@ -22,13 +22,19 @@ class TestIsIsogramClass:
     @pytest.mark.parametrize(
         "word, second_argument, excepted_error",
         [
-            pytest.param(1, "a", TypeError, id="test_takes_one_argument"),
-            pytest.param(5243, "B", TypeError, id="test_takes_one_argument"),
-            pytest.param(False, "123", TypeError, id="test_takes_one_argument"),
-            pytest.param(True, "HellO", TypeError, id="test_takes_one_argument"),
+            pytest.param(1, "a", TypeError,
+                         id="test_takes_one_argument"),
+            pytest.param(5243, "B", TypeError,
+                         id="test_takes_one_argument"),
+            pytest.param(False, "123", TypeError,
+                         id="test_takes_one_argument"),
+            pytest.param(True, "HellO", TypeError,
+                         id="test_takes_one_argument"),
         ]
     )
-    def test_takes_one_argument(self, word: str, second_argument: Any, excepted_error: Exception) -> None:
+    def test_takes_one_argument(self, word: str,
+                                second_argument: Any,
+                                excepted_error: Exception) -> None:
         with pytest.raises(excepted_error):
             assert is_isogram(word, second_argument)
 
@@ -41,7 +47,9 @@ class TestIsIsogramClass:
                          id="test_same_latters_with_different_cases"),
         ]
     )
-    def test_same_latters_with_different_cases(self, word: str, excepted_result: bool) -> None:
+    def test_same_latters_with_different_cases(self,
+                                               word: str,
+                                               excepted_result: bool) -> None:
         assert is_isogram(word) == excepted_result
 
     @pytest.mark.parametrize(
@@ -51,17 +59,21 @@ class TestIsIsogramClass:
                          id="test_empty_string_is_an_isogram"),
         ]
     )
-    def test_empty_string_is_an_isogram(self, word: str, excepted_result: bool) -> None:
+    def test_empty_string_is_an_isogram(self,
+                                        word: str,
+                                        excepted_result: bool) -> None:
         assert is_isogram(word) == excepted_result
 
     @pytest.mark.parametrize(
         "word, excepted_result",
         [
             pytest.param("letter", False,
-                         id="test_not_only_consecutive_letters_are_not_an_isogram"),
+                         id="test_not_only_consecutive_letters"),
             pytest.param("alphabet", False,
-                         id="test_not_only_consecutive_letters_are_not_an_isogram"),
+                         id="test_not_only_consecutive_letters"),
         ]
     )
-    def test_not_only_consecutive_letters_are_not_an_isogram(self, word: str, excepted_result: bool) -> None:
+    def test_not_only_consecutive_letters(self,
+                                          word: str,
+                                          excepted_result: bool) -> None:
         assert is_isogram(word) == excepted_result
