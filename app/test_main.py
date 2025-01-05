@@ -1,22 +1,18 @@
 import pytest
-
-
 from app.main import is_isogram
 
 
-def test_should_return_true() -> None:
-    word = ""
-    parts = is_isogram(word)
-    assert parts == True
-
-
-def test_should_return_false() -> None:
-    word = "look"
-    parts = is_isogram(word)
-    assert parts == False
-
-
-def test_should_return_is_true1() -> None:
-    word = "lads"
-    parts = is_isogram(word)
-    assert parts == True
+@pytest.mark.parametrize(
+    "word,expected",
+    [
+        pytest.param("", True, id="Empty string is an isogram"),
+        pytest.param("playgrounds", True, id="All unique letters"),
+        pytest.param("look", False, id="Repeating letters"),
+        pytest.param("Adam", False, id="Case-insensitive repetition"),
+        pytest.param("lads", True, id="Unique letters"),
+        pytest.param("Machine", True, id="Case-insensitive unique letters"),
+    ]
+)
+def test_is_isogram(word: str, expected: bool) -> None:
+    result = is_isogram(word)
+    assert result == expected
