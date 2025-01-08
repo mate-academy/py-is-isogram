@@ -8,7 +8,7 @@ import pytest
         ("playgrounds", True),
         ("look", False),
         ("Adam", False),
-        (" ", True),
+        ("", True),
     ],
 )
 def test_is_isogram(test_input: str, expected: bool) -> None:
