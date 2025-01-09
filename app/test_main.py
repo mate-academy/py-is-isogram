@@ -2,17 +2,11 @@ import pytest
 from app.main import is_isogram
 
 
-def test_case_insensitive_is_isogram() -> None:
-    assert not is_isogram("AaAAAaaaa")
-
-
-def test_empty_is_isogram() -> None:
-    assert is_isogram("")
-
-
-def test_non_consecutive_is_isogram() -> None:
-    assert not is_isogram("acegikmoqsuwy")
-
-
-def test_consecutive_is_isogram() -> None:
-    assert not is_isogram("abcdefghijklmnopqrstuvwxyz")
+@pytest.mark.parametrize("word, expected", [
+    ("AaAAAaaaa", False),
+    ("", True),
+    ("acegikmoqsuwy", False),
+    ("abcdefghijklmnopqrstuvwxyz", False),
+])
+def test_is_isogram(word, expected) -> None:
+    assert is_isogram(word) == expected
