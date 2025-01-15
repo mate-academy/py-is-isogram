@@ -15,7 +15,7 @@ def test_not_consecutive_letters() -> None:
 
 
 def test_with_empty_list() -> None:
-    assert is_isogram(" ")
+    assert is_isogram("")
 
 
 @pytest.mark.parametrize(
@@ -23,7 +23,7 @@ def test_with_empty_list() -> None:
         ("playgrounds", True),
         ("look", False),
         ("Adam", False),
-        (" ", True),
+        ("", True),
     ]
 )
 def test_various_case(current_text: str, expected: bool) -> None:
