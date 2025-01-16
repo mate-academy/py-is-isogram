@@ -27,4 +27,3 @@ def test_is_isogram_mixed_case_unique_letters() -> None:
 
 def test_is_isogram_mixed_case_repeated_letters() -> None:
     assert is_isogram("Alphabet") is False
-
