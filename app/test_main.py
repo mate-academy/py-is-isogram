@@ -3,7 +3,7 @@ from app.main import is_isogram
 
 
 def test_if_isogram_is_empty_string() -> None:
-    assert is_isogram(" ") is True
+    assert is_isogram("") is True
 
 
 def test_if_isogram_do_not_contains_the_same_letters() -> None:
