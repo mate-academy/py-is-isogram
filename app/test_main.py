@@ -1,6 +1,5 @@
 import pytest
 from app import main
-from _pytest.monkeypatch import MonkeyPatch
 
 
 def test_empty_string_is_isogram() -> None:
@@ -52,17 +51,7 @@ def test_is_isogram_parametrized(word: str, expected_result: bool) -> None:
     assert main.is_isogram(word) is expected_result
 
 
-def test_isogram_is_case_insensitive(monkeypatch: MonkeyPatch) -> None:
-    def case_sensitive_isogram(word: str) -> bool:
-        for letter in word:
-            if word.count(letter) > 1:
-                return False
-        return True
+def test_isogram_is_case_insensitive() -> None:
 
-    monkeypatch.setattr(main, "is_isogram", case_sensitive_isogram)
-
-    # Запускаємо тести з поточного файлу
-    test_result = pytest.main([__file__])
-    assert test_result.value == 1, (
-        "String with different cases of the same letter is not an isogram."
-    )
+    assert main.is_isogram("AbCdE") is True
+    assert main.is_isogram("AbCda") is False
