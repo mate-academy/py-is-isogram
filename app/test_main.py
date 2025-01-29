@@ -1,3 +1,22 @@
+import pytest
+
 from app.main import is_isogram
 
-# write your code here
+
+class TestIsIsogram:
+    @pytest.mark.parametrize(
+        "value,expected_result",
+        [
+            ("", True),
+            ("playgrounds", True),
+            ("look", False),
+            ("Hello", False),
+            ("StRiKe", True)
+        ]
+    )
+    def test_isogram(
+            self,
+            value: str,
+            expected_result: bool,
+    ) -> None:
+        assert is_isogram(value) == expected_result
