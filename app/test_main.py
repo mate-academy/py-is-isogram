@@ -11,7 +11,10 @@ class TestIsIsogram:
             ("playgrounds", True),
             ("look", False),
             ("Hello", False),
-            ("StRiKe", True)
+            ("StRiKe", True),
+            ("FoOtbalL", False),
+            ("nfrikngwri", False),
+            ("mowvjnqp", True)
         ]
     )
     def test_isogram(
