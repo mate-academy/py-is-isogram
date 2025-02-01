@@ -1,5 +1,6 @@
 from app.main import is_isogram
 
+
 def test_empty_string() -> None:
     assert is_isogram("") is True
 
