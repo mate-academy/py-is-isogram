@@ -1,7 +1,6 @@
-from xmlrpc.client import Fault
-
 import pytest
 from app.main import is_isogram
+
 
 @pytest.mark.parametrize(
     "word, result",
@@ -23,4 +22,4 @@ from app.main import is_isogram
 def test_(word: str, result: bool) -> None:
     assert (
         is_isogram(word) is result
-    ), f"The letters must be unique for the word to be considered an isogram."
+    ), "The letters must be unique for the word to be considered an isogram"
