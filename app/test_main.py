@@ -24,4 +24,4 @@ class TestIsIsogram:
     )
     def test_is_isogram(self, word: str, expected_value: bool) -> None:
         assert (is_isogram(word) is expected_value
-                ), "The word must have unique letter for considerate isogram"
+                ), "The word must have unique letter to considerate isogram"
