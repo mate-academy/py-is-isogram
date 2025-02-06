@@ -10,7 +10,8 @@ from app.main import is_isogram
         ("PLAY", True),
         ("lOoK", False),
         (" ", True),
-        ("", True)
+        ("", True),
+        ("two words", False)
     ],
     ids=[
         "check lowercase true statement",
@@ -18,7 +19,8 @@ from app.main import is_isogram
         "check Uppercase true statement",
         "check Randomcase false statement",
         "check whitespace true statement",
-        "check empty string true statement"
+        "check empty string true statement",
+        "check two words false statement"
     ]
 )
 def test_standart_queries(word: str, result: bool) -> None:
