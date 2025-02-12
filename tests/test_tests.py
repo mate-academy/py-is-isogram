@@ -59,8 +59,8 @@ def test_consecutive_letters_are_not_isogram(monkeypatch):
         word_lower = word.lower()
         for ind in range(1, len(word_lower) - 1):
             if (word_lower.count(word_lower[ind]) >= 2 and
-                    (word_lower[ind] == word_lower[ind - 1] or
-                     word_lower[ind] == word_lower[ind + 1])):
+                    not (word_lower[ind] == word_lower[ind + 1] or
+                         word_lower[ind] == word_lower[ind - 1])):
                 return False
         return True
 
