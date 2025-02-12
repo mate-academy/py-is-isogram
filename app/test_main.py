@@ -13,5 +13,5 @@ from app.main import is_isogram
         ("Rare", False)
     ]
 )
-def test_should_return_correct_value(word, result) -> None:
+def test_should_return_correct_value(word: str, result: bool) -> None:
     assert is_isogram(word) == result
