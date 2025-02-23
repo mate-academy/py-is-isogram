@@ -29,8 +29,8 @@ class TestIsIsogram:
         ]
     )
     def test_is_isogram(
-                        self,
-                        string: str,
-                        expected_result: bool
+            self,
+            string: str,
+            expected_result: bool
     ) -> None:
         assert is_isogram(string) == expected_result
