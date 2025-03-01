@@ -32,7 +32,7 @@ class TestIsIsogram:
     )
     def test_is_isogram(
             self,
-            word,
-            result
-    ):
+            word: str,
+            result: bool
+    ) -> None:
         assert is_isogram(word) == result
