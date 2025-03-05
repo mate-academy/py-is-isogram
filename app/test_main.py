@@ -19,7 +19,7 @@ class TestIsIsogram:
             "return True for an empty string"
         )
     )
-    def test_defines_isogram_correctly(
+    def test_isogram_correctly(
             self,
             word: str,
             expected_result: bool
