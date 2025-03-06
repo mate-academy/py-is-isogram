@@ -1,8 +1,6 @@
 import pytest
-
 from app.main import is_isogram
 
-# write your code here
 
 @pytest.mark.parametrize(
     "word, expected_result",
