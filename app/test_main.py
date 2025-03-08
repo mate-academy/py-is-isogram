@@ -5,22 +5,22 @@ import pytest
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ('playgrounds',
-         True
-        ),
-        ('look',
-         False
-         ),
-        ('Adam',
-         False
-         ),
-        ('playgrounds',
+        ("playgrounds",
          True
          ),
-        ('',
+        ("look",
+         False
+         ),
+        ("Adam",
+         False
+         ),
+        ("playgrounds",
+         True
+         ),
+        ("",
          True
          ),
     ]
 )
-def test_is_isogram(word, expected) -> None:
+def test_is_isogram(word: str, expected: bool) -> None:
     assert is_isogram(word) == expected
