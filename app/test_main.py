@@ -2,7 +2,7 @@ from app.main import is_isogram
 
 
 def test_empty_string_is_isogram() -> None:
-    assert is_isogram('')
+    assert is_isogram("")
 
 
 def test_is_isogram_valid_word() -> None:
