@@ -2,42 +2,42 @@ from app.main import is_isogram
 
 
 def test_is_isogram_valid_word() -> None:
-    assert is_isogram("playgrounds") == True
+    assert is_isogram("playgrounds")
 
 
 def test_is_isogram_invalid_word() -> None:
-    assert is_isogram("look") == False
+    assert not is_isogram("look")
 
 
 def test_is_isogram_invalid_word_case_sensitive() -> None:
-    assert is_isogram("Adam") == False
+    assert not is_isogram("Adam")
 
 
 def test_is_isogram_empty_string() -> None:
-    assert is_isogram(" ") == True
+    assert is_isogram(" ")
 
 
 def test_is_isogram_case_insensitivity() -> None:
-    assert is_isogram("Aa") == False
-    assert is_isogram("mM") == False
-    assert is_isogram("Mm") == False
+    assert not is_isogram("Aa")
+    assert not is_isogram("mM")
+    assert not is_isogram("Mm")
 
 
 def test_is_isogram_single_character() -> None:
-    assert is_isogram("a") == True
-    assert is_isogram("Z") == True
+    assert is_isogram("a")
+    assert is_isogram("Z")
 
 
 def test_is_isogram_two_same_characters() -> None:
-    assert is_isogram("aa") == False
-    assert is_isogram("bb") == False
-    assert is_isogram("MM") == False
+    assert not is_isogram("aa")
+    assert not is_isogram("bb")
+    assert not is_isogram("MM")
 
 
 def test_is_isogram_long_word_no_repeat() -> None:
-    assert is_isogram("abcdefghijklmno") == True
+    assert is_isogram("abcdefghijklmno")
 
 
 def test_is_isogram_long_word_with_repeats() -> None:
-    assert is_isogram("abcdefghijklmna") == False
-    assert is_isogram("abcdefghijklmnaa") == False
+    assert not is_isogram("abcdefghijklmna")
+    assert not is_isogram("abcdefghijklmnaa")
