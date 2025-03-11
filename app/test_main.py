@@ -1,6 +1,10 @@
 from app.main import is_isogram
 
 
+def test_empty_string_is_isogram() -> None:
+    assert is_isogram('')
+
+
 def test_is_isogram_valid_word() -> None:
     assert is_isogram("playgrounds")
 
@@ -11,10 +15,6 @@ def test_is_isogram_invalid_word() -> None:
 
 def test_is_isogram_invalid_word_case_sensitive() -> None:
     assert not is_isogram("Adam")
-
-
-def test_is_isogram_empty_string() -> None:
-    assert not is_isogram(" ")
 
 
 def test_is_isogram_case_insensitivity() -> None:
