@@ -14,7 +14,7 @@ def test_is_isogram_invalid_word_case_sensitive() -> None:
 
 
 def test_is_isogram_empty_string() -> None:
-    assert is_isogram(" ")
+    assert not is_isogram(" ")
 
 
 def test_is_isogram_case_insensitivity() -> None:
