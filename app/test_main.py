@@ -17,7 +17,7 @@ class TestIsIsogramClass:
                 id="Test word with no repeating letters"
             ),
             pytest.param(
-                "dad",
+                "apple",
                 False,
                 id="Test word with repeating letters"
             ),
