@@ -10,8 +10,6 @@ def test_is_isogram() -> None:
     assert not is_isogram("zZ")
     assert not is_isogram("aa")
     assert not is_isogram("aabbcc")
-
-
-def test_non_consecutive_letters_are_not_isogram() -> None:
     assert not is_isogram("hello")
     assert not is_isogram("ball")
+    assert not is_isogram("asap")
