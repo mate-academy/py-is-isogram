@@ -11,7 +11,7 @@ from app.main import is_isogram
                      id="test word with repeating letters"),
         pytest.param("Adam", False,
                      id="test word with big and small letters"),
-        pytest.param(" ", True, id="test empty string")
+        pytest.param("", True, id="test empty string")
     ]
 )
 def test_should_return_true_if_word_is_isogram(word: str,
