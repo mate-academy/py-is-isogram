@@ -10,4 +10,3 @@ def test_is_isogram() -> None:
     assert not is_isogram("zZ")
     assert not is_isogram("aa")
     assert not is_isogram("aabbcc")
-
