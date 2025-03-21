@@ -1,5 +1,3 @@
-from pickle import FALSE
-
 import pytest
 from app.main import is_isogram
 
@@ -13,7 +11,7 @@ from app.main import is_isogram
         ("look", False)
     ]
 )
-def test_is_isogram(input_string, expected_result):
+def test_is_isogram(input_string: str, expected_result: bool) -> None:
     assert is_isogram(input_string) == expected_result
 
 
@@ -26,6 +24,8 @@ def test_is_isogram(input_string, expected_result):
                      id="Should return AttributeError when input is integer"),
     ]
 )
-def test_is_isogram_error(input_string, expected_error):
+def test_is_isogram_error(
+        input_string: str, expected_error: Exception
+) -> None:
     with pytest.raises(expected_error):
         is_isogram(input_string)
