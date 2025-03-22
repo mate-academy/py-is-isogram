@@ -7,10 +7,10 @@ import pytest
     ("playgrounds", True),
     ("look", FALSE),
     ("Adam", FALSE),
-    (" ", True)
+    ("", True)
 ])
 def test_word_iso(word: str, definition: bool) -> None:
     result = is_isogram(word)
-    result == definition
+    assert result == definition
 
 # write your code here
