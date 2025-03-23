@@ -23,7 +23,7 @@ class TestIsogram:
             "Function is a case-insensitive",
             "Function is a case-insensitive with LOWER case",
             "The words with the repeated letter is False",
-            "The words with single letter is True",
+            "The words with single letter is True.",
             "The words with single letter in Upper case is True",
         ]
     )
