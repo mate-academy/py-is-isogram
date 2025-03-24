@@ -9,7 +9,7 @@ class TestIsIsogram:
         [
             ("playgrounds", True),
             ("look", False),
-            (" ", True),
+            ("", True),
             ("Adam", False),
             ("A", True)
 
