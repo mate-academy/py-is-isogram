@@ -5,7 +5,7 @@ def test_is_isogram_case_insensitive() -> None:
     assert is_isogram("playgrounds") is True
     assert is_isogram("PlayGrounds") is True
     assert is_isogram("Adam") is False
-    assert is_isogram("aA") is True
+    assert is_isogram("aA") is False
 
 
 def test_is_isogram_empty_string() -> None:
