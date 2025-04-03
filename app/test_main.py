@@ -26,5 +26,5 @@ def test_is_isogram_single_character() -> None:
 
 
 def test_is_isogram_with_mixed_case() -> None:
-    assert is_isogram("aA") is True
+    assert is_isogram("aA") is False
     assert is_isogram("lOOK") is False
