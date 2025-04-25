@@ -6,7 +6,7 @@ def test_is_isogram_true() -> None:
 
 
 def test_is_isogram_false() -> None:
-    assert is_isogram("look")
+    assert not is_isogram("look")
 
 
 def test_is_isogram_register() -> None:
@@ -14,4 +14,4 @@ def test_is_isogram_register() -> None:
 
 
 def test_is_isogram_empty() -> None:
-    assert not is_isogram("")
+    assert nis_isogram("")
