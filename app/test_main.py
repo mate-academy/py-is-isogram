@@ -3,7 +3,7 @@ from app.main import is_isogram
 
 
 @pytest.mark.parametrize(
-    "word", "expected_bool",
+    "word","expected_bool",
     [
         ("playgrounds", True),
         ("look", False),
