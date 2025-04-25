@@ -14,4 +14,4 @@ def test_is_isogram_register() -> None:
 
 
 def test_is_isogram_empty() -> None:
-    assert nis_isogram("")
+    assert is_isogram("")
