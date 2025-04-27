@@ -16,4 +16,3 @@ from app.main import is_isogram
 def test_is_isogram(isogram: str, result_bool: bool) -> None:
     result = is_isogram(isogram)
     assert result == result_bool
-
