@@ -5,14 +5,13 @@ from app.main import is_isogram
 
 
 class TestIsogram:
-    @pytest.mark.paramitze(
+    @pytest.mark.parametrize(
         "izo_string, result",
         [
             pytest.param("Hania", True),
             pytest.param("Mateusz", True),
             pytest.param("Mom", False),
             pytest.param("", True),
-            pytest.param("1Mat2eusz", False),
             pytest.param("1Mat2eusz", False),
             pytest.param("daD", False),
         ]
