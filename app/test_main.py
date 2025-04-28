@@ -18,10 +18,5 @@ def test_if_upper_and_lower_case_included() -> None:
 
 
 def test_if_string_type() -> None:
-    word = 532
-    try:
-        is_isogram(word)
-    except TypeError:
-        assert True
-    else:
-        assert False, "Isogram has a string type"
+    word = "532"
+    assert is_isogram(word), "Isogram must be a string type"
