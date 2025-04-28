@@ -13,8 +13,7 @@ def test_if_duplicate_is_isogram() -> None:
 
 def test_if_upper_and_lower_case_included() -> None:
     word = "Adam"
-    assert not is_isogram(word.lower()), \
-        "Upper and lower case are not included"
+    assert not is_isogram(word), "Upper and lower case are not included"
 
 
 def test_if_string_type() -> None:
