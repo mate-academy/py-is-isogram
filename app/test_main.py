@@ -9,8 +9,8 @@ def test_empty_string_is_isogram() -> None:
 
 def test_is_isogram_false() -> None:
     isogram = is_isogram("hello world")
-    if not isogram:
-        return False
+    if isogram:
+        assert False
 
 
 def test_is_isogram_true() -> None:
@@ -27,11 +27,11 @@ def test_isogram_case_insensitive() -> None:
 
 def test_non_consecutive_letters_are_not_isogram() -> None:
     isogram = is_isogram("pytest")
-    if not isogram:
-        return False
+    if isogram:
+        assert False
 
 
 def test_consecutive_letters_are_isogram() -> None:
     isogram = is_isogram("hello")
-    if not isogram:
-        return False
+    if isogram:
+        assert False
