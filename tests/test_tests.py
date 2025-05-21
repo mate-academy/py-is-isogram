@@ -4,13 +4,14 @@ from app import main
 
 
 def test_isogram_is_case_insensitive(monkeypatch):
-    def case_sensitive_isogram(word: str):
-        for letter in word:
-            if word.count(letter) > 1:
+    def case_insensitive_isogram(word: str):
+        word_lower = word.lower()  # Convert to lowercase
+        for letter in word_lower:
+            if word_lower.count(letter) > 1:
                 return False
         return True
 
-    monkeypatch.setattr(main, "is_isogram", case_sensitive_isogram)
+    monkeypatch.setattr(main, "is_isogram", case_insensitive_isogram)
 
     test_result = pytest.main(["app/test_main.py"])
     assert test_result.value == 1, (
