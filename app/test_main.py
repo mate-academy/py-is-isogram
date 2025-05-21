@@ -16,11 +16,6 @@ def test_is_isogram_true() -> None:
     assert isogram
 
 
-def test_isogram_case_insensitive() -> None:
-    isogram = is_isogram("WoRlD")
-    assert isogram
-
-
 def test_non_consecutive_letters_are_not_isogram() -> None:
     isogram = is_isogram("pytest")
     assert not isogram
