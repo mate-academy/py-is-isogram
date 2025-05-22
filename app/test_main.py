@@ -13,7 +13,7 @@ def test_should_return_false_if_small_and_big_letters() -> None:
 
 
 def test_should_return_true_if_correct() -> None:
-    word = "England"
+    word = "Angel"
     assert is_isogram(word) is True
 
 
