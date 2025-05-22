@@ -9,7 +9,8 @@ def test_should_return_false_for_word_with_consecutive_duplicates() -> None:
     assert is_isogram("look") is False
 
 
-def test_should_return_false_for_word_with_non_consecutive_duplicates() -> None:
+def test_should_return_false_for_word_with_non_consecutive_duplicates() \
+        -> None:
     assert is_isogram("Adam") is False
 
 
