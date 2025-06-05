@@ -25,6 +25,6 @@ import pytest
          "test_case_8",
          "test_case_9"]
 )
-def test_check_functionality_of_the_function_above(input_value, result_value):
+def test_check_functionality_of_the_function_above(input_value: str,
+                                                   result_value: bool) -> None:
     assert is_isogram(input_value) == result_value
-
