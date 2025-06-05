@@ -6,14 +6,14 @@ import pytest
     "input_value, result_value",
     [
         ("", True),
-        ("core", True),
+        ("ccore", False),
         ("land", True),
         ("computer", True),
-        ("laptop", False),
-        ("analysis", False),
-        ("cucumber", False),
+        ("laPtop", False),
+        ("AnalysiS", False),
+        ("Oopsy", False),
         ("helm", True),
-        ("annihilation", False)
+        ("Aa", False)
     ],
     ids=["test_case_1",
          "test_case_2",
