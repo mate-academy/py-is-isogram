@@ -16,5 +16,3 @@ def test_function_has_or_no_similar_letters(
         result: bool
 ) -> None:
     assert is_isogram(word) is result
-
-
