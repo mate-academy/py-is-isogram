@@ -1,6 +1,7 @@
 def is_isogram(word: str) -> bool:
     """
-    Determine if a word is an isogram (no repeating letters, ignoring case and non-letter characters).
+    Determine if a word is an isogram (no repeating letters, ignoring case
+    and non-letter characters).
 
     Args:
         word: Input string to check
