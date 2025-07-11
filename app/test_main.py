@@ -12,6 +12,11 @@ from app.main import is_isogram
         pytest.param("Adam", False, id="repeating-a-different-case"),
         pytest.param("AAmre", False, id="repeating-uppercase-a"),
         pytest.param(
+            "AAmeremaflasgiwda",
+            False,
+            id="repeating-more-than-one-character"
+        ),
+        pytest.param(
             "abcdefghijklmnopqrstuvwxyz",
             True,
             id="all-unique-letters"
