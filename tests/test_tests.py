@@ -1,5 +1,9 @@
 import pytest
 from app import main
+from pathlib import Path
+
+# Отримуємо абсолютний шлях до app/test_main.py
+TEST_MAIN_PATH = str(Path(__file__).parent.parent / "app" / "test_main.py")
 
 def test_isogram_is_case_insensitive(monkeypatch):
     def case_sensitive_isogram(word: str):
@@ -10,7 +14,7 @@ def test_isogram_is_case_insensitive(monkeypatch):
 
     monkeypatch.setattr(main, "is_isogram", case_sensitive_isogram)
 
-    test_result = pytest.main(["../app/test_main.py"])
+    test_result = pytest.main([TEST_MAIN_PATH])
     assert test_result.value == 1, (
         "String with different cases of the same letter is not an isogram."
     )
@@ -27,7 +31,7 @@ def test_empty_string_is_isogram(monkeypatch):
 
     monkeypatch.setattr(main, "is_isogram", non_empty_string_isogram)
 
-    test_result = pytest.main(["../app/test_main.py"])
+    test_result = pytest.main([TEST_MAIN_PATH])
     assert test_result.value == 1, (
         "Empty string is an isogram."
     )
@@ -44,7 +48,7 @@ def test_non_consecutive_letters_are_not_isogram(monkeypatch):
         main, "is_isogram", only_consecutive_letters_are_not_isogram
     )
 
-    test_result = pytest.main(["../app/test_main.py"])
+    test_result = pytest.main([TEST_MAIN_PATH])
     assert test_result.value == 1, (
         "Not only consecutive letters are not an isogram."
     )
@@ -63,7 +67,7 @@ def test_consecutive_letters_are_not_isogram(monkeypatch):
         main, "is_isogram", only_non_consecutive_letters_are_not_isogram
     )
 
-    test_result = pytest.main(["../app/test_main.py"])
+    test_result = pytest.main([TEST_MAIN_PATH])
     assert test_result.value == 1, (
         "Not only non-consecutive letters are not an isogram."
     )
