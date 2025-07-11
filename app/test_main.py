@@ -18,7 +18,7 @@ def test_repeating_letters_non_consecutive() -> None:
 
 
 def test_case_insensitive_false() -> None:
-    assert is_isogram("Adam") is False
+    assert is_isogram("ADam") is False
 
 
 def test_case_insensitive_true() -> None:
