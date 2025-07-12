@@ -34,9 +34,9 @@ class TestIsIsogram:
         assert is_isogram("XyZ") is True
 
     def test_mixed_case_with_repeating_letters(self) -> None:
-        """Test mixed case words with repeating letters."""
+        """Test mixed case words with various patterns."""
         assert is_isogram("Hello") is False
-        assert is_isogram("WoRlD") is False
+        assert is_isogram("WoRlD") is True
         assert is_isogram("AbCdEfG") is True
 
     def test_all_same_letters(self) -> None:
@@ -55,9 +55,9 @@ class TestIsIsogram:
         assert is_isogram("uncopyrightable") is True
         assert is_isogram("dermatoglyphics") is True
 
-    def test_long_non_isogram(self) -> None:
-        """Test longer words that are not isograms."""
-        assert is_isogram("subdermatoglyphic") is False
+    def test_long_words(self) -> None:
+        """Test longer words - both isograms and non-isograms."""
+        assert is_isogram("subdermatoglyphic") is True
         assert is_isogram("incomprehensible") is False
 
     @pytest.mark.parametrize("word,expected", [
