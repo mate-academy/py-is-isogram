@@ -18,4 +18,4 @@ def test_case_immune() -> None:
 
 
 def test_non_consecutive_letters() -> None:
-    assert is_isogram("aaaa")
+    assert is_isogram("aba") == False
