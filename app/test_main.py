@@ -18,4 +18,3 @@ def test_reapet_letters() -> None:
 
 def test_non_isogram() -> None:
     assert is_isogram("look") is False
-
