@@ -1,4 +1,9 @@
 def is_isogram(word: str) -> bool:
+    if word is None:
+        raise ValueError("Word cannot be 'None'")
+    if not isinstance(word, str):
+        raise TypeError("Wrong word type")
+
     word_lower = word.lower()
     for letter in word_lower:
         if word_lower.count(letter) > 1:
