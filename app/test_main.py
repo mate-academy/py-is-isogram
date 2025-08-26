@@ -3,14 +3,15 @@ from app.main import is_isogram
 
 
 class TestIsIsogram:
-    @pytest.mark.parametrize("word: str, expected_value: bool", [
-        ("playgrouds", True),
-        ("Look", False),
+    @pytest.mark.parametrize("word, expected_value", [
+        ("playgrounds", True),
+        ("LoOk", False),
         ("Adam", False),
         ("Alfa", False),
         ("Mate", True),
         ("brother", False),
-        ("Chemistry", True)
+        ("Chemistry", True),
+        ("", True)
     ])
     def test_is_isogram(self,
                         word: str,
