@@ -52,4 +52,3 @@ from app.main import is_isogram
 )
 def test_is_isogram(string: str, result: bool) -> None:
     assert is_isogram(string) == result
-    
