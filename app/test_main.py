@@ -4,7 +4,7 @@ import pytest
 
 @pytest.mark.parametrize(
     "word, result",
-    [  
+    [
         ("mama", False),
         ("Mama", False),
         ("loiut", True),
@@ -26,5 +26,5 @@ def test_is_isogram_examples(word: str, result: bool) -> None:
     "BooK",
     "committee",
 ])
-def test_consecutive_letters_are_not_isogram(word):
+def test_consecutive_letters_are_not_isogram(word: str) -> None:
     assert main.is_isogram(word) is False
