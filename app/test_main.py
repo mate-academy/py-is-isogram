@@ -11,8 +11,8 @@ from app.main import is_isogram
         ("", True),
         ("Alphabet", False),
         ("Python", True),
-        ("Isogram", False),
-        ("Unique", True),
+        ("Isogram", True),
+        ("Unique", False),
         ("MISSISSIPPI", False),
         ("abcABC", False),
     ]
