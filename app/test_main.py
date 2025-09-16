@@ -3,7 +3,7 @@ import pytest
 
 
 @pytest.mark.parametrize(
-    "word,result",
+    "words,result",
     [
         ("playgrounds", True),
         ("look", False),
@@ -13,9 +13,9 @@ import pytest
     ids=[
         " test for long word",
         " test for short word",
-        "test for big item"
-        "test for nothing"
+        "test for big item",
+        "test for nothing",
     ]
 )
-def test_is_isogram(word: str, result: bool) -> None:
-    assert is_isogram(word) == result
+def test_is_isogram(words: str, result: bool) -> None:
+    assert is_isogram(words) == result
