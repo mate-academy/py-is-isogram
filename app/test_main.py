@@ -4,10 +4,10 @@ import pytest
 @pytest.mark.parametrize(
     "word,result",
     [
-        ('playgrounds', True),
-        ('look', False),
-        ('Adam', False),
-        ('', True),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True),
     ],
     ids=[
         " test for long word",
@@ -16,6 +16,5 @@ import pytest
         "test for nothing"
     ]
 )
-def test_is_isogram(word, result):
+def test_is_isogram(word: str, result: bool) -> None:
     assert is_isogram(word) == result
-
