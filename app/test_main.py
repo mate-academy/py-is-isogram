@@ -37,6 +37,5 @@ def test_is_isogram_non_string_raises(bad_input: object):
         ("abc-", False),
     ]
 )
-def test_is_isogram_assertion_error(assertion_error: object) -> None:
-    with pytest.raises(AssertionError):
-        is_isogram(assertion_error)
+def test_is_isogram_assertion_error(word, expected):
+   assert is_isogram(word) is expected
