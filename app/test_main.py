@@ -31,7 +31,7 @@ def test_is_isogram_non_string_raises(bad_input: object):
 
 
 @pytest.mark.parametrize(
-    "assertion_error",
+    "word, expected",
     [
         ("abc1", False),
         ("abc-", False),
