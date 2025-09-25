@@ -21,4 +21,3 @@ def test_is_isogram_cases(word: str, expected: bool) -> None:
     result = is_isogram(word)
     assert result == expected
     assert isinstance(result, bool)
-
