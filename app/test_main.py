@@ -28,14 +28,6 @@ def test_is_isogram_(word, expected) -> None:
                              "abc1"
                          ]
                          )
-def test_is_isogram_non_string_raise(
-        bad_input: Union[
-            float,
-            int,
-            list,
-            dict,
-            str,
-            None
-        ]) -> None:
+def test_is_isogram_non_string_raises(bad_input: object):
     with pytest.raises(TypeError):
-        is_isogram(word=bad_input)
+        is_isogram(bad_input)
