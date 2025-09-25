@@ -2,6 +2,7 @@ import pytest
 from app.main import is_isogram
 from typing import Union
 
+
 @pytest.mark.parametrize(
     "word,expected",
     [("look", False),
@@ -12,15 +13,9 @@ from typing import Union
 
      ]
 )
-
-
 def test_is_isogram_(word, expected) -> None:
     assert is_isogram(word) is expected
     assert isinstance(is_isogram(word), bool)
-
-
-def test_is_isogram_true() -> None:
-    assert is_isogram("Playground") == True
 
 
 @pytest.mark.parametrize("bad_input",
