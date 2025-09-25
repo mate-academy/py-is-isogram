@@ -8,9 +8,6 @@ from app.main import is_isogram
      ("", True),
      ("Playground", True),
      ("Adam", False),
-     ("abc1", False),
-     ("abc-", False),
-
 
      ]
 )
@@ -31,3 +28,17 @@ def test_is_isogram_(word, expected) -> None:
 def test_is_isogram_non_string_raises(bad_input: object):
     with pytest.raises(AttributeError):
         is_isogram(bad_input)
+
+
+@pytest.mark.parametrize(
+    "assertion_error",
+    [
+        ("abc1", False),
+        ("abc-", False),
+    ]
+)
+
+def test_is_isogram_assertion_error(assertion_error: object) -> None:
+    with pytest.raises(AssertionError):
+        is_isogram(assertion_error)
+
