@@ -1,6 +1,5 @@
 import pytest
 from app.main import is_isogram
-from typing import Union
 
 
 @pytest.mark.parametrize(
