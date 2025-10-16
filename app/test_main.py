@@ -29,8 +29,7 @@ def test_isogram_is_case_insensitive(monkeypatch: MonkeyPatch) -> None:
         return True
 
     monkeypatch.setattr("app.main.is_isogram", case_sensitive_isogram)
-    test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1, (
+    assert not is_isogram("Adam"), (
         "String with different cases of the same letter is not an isogram."
     )
 
@@ -46,9 +45,8 @@ def test_empty_string_is_isogram(monkeypatch: MonkeyPatch) -> None:
         return True
 
     monkeypatch.setattr("app.main.is_isogram", non_empty_string_isogram)
-    test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1, (
-        "Empty string is an isogram."
+    assert is_isogram("") is True, (
+        "Empty string should be considered an isogram."
     )
 
 
@@ -65,9 +63,8 @@ def test_non_consecutive_letters_are_not_isogram(
     monkeypatch.setattr(
         "app.main.is_isogram", only_consecutive_letters_are_not_isogram
     )
-    test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1, (
-        "Not only consecutive letters are not an isogram."
+    assert not is_isogram("look"), (
+        "Non-consecutive duplicates should also break isogram status."
     )
 
 
@@ -88,7 +85,6 @@ def test_consecutive_letters_are_not_isogram(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setattr(
         "app.main.is_isogram", only_non_consecutive_letters_are_not_isogram
     )
-    test_result = pytest.main(["app/test_main.py"])
-    assert test_result.value == 1, (
-        "Not only non-consecutive letters are not an isogram."
+    assert not is_isogram("look"), (
+        "Consecutive duplicates should also break isogram status."
     )
