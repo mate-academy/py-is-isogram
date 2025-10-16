@@ -1,4 +1,5 @@
 import pytest
+from _pytest.monkeypatch import MonkeyPatch
 from app.main import is_isogram
 
 
@@ -20,7 +21,7 @@ def test_is_isogram_cases(word: str, expected: bool) -> None:
     assert is_isogram(word) == expected
 
 
-def test_isogram_is_case_insensitive(monkeypatch) -> None:
+def test_isogram_is_case_insensitive(monkeypatch: MonkeyPatch) -> None:
     def case_sensitive_isogram(word: str) -> bool:
         for letter in word:
             if word.count(letter) > 1:
@@ -34,7 +35,7 @@ def test_isogram_is_case_insensitive(monkeypatch) -> None:
     )
 
 
-def test_empty_string_is_isogram(monkeypatch) -> None:
+def test_empty_string_is_isogram(monkeypatch: MonkeyPatch) -> None:
     def non_empty_string_isogram(word: str) -> bool:
         if word == "":
             return False
@@ -51,7 +52,9 @@ def test_empty_string_is_isogram(monkeypatch) -> None:
     )
 
 
-def test_non_consecutive_letters_are_not_isogram(monkeypatch) -> None:
+def test_non_consecutive_letters_are_not_isogram(
+    monkeypatch: MonkeyPatch
+) -> None:
     def only_consecutive_letters_are_not_isogram(word: str) -> bool:
         word_lower = word.lower()
         for ind in range(len(word_lower) - 1):
@@ -68,7 +71,7 @@ def test_non_consecutive_letters_are_not_isogram(monkeypatch) -> None:
     )
 
 
-def test_consecutive_letters_are_not_isogram(monkeypatch) -> None:
+def test_consecutive_letters_are_not_isogram(monkeypatch: MonkeyPatch) -> None:
     def only_non_consecutive_letters_are_not_isogram(word: str) -> bool:
         word_lower = word.lower()
         for ind in range(1, len(word_lower) - 1):
