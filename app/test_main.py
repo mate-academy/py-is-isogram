@@ -41,4 +41,3 @@ def test_cases_unusual(word: str, expected: bool) -> None:
 def test_non_string(word: str) -> None:
     with pytest.raises(AttributeError):
         is_isogram(word)
-
