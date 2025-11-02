@@ -5,11 +5,11 @@ import pytest
 @pytest.mark.parametrize(
     "word, expected",
     [
-     ("playgrounds", True),
-     ("look", False),
-     ("Adam", False),
-     ("", True)
-    ]
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True)
+    ],
 )
 def test_is_isogram_valid_input(
         word: str,
