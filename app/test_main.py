@@ -2,6 +2,7 @@ import pytest
 from typing import Any
 from app.main import is_isogram
 
+
 @pytest.mark.parametrize(
     "word_to_test, result",
     [
@@ -42,6 +43,7 @@ from app.main import is_isogram
             id="Is not isogram - only upper cases"
         ),
     ]
+
 
 )
 def test_for_valid_input_data(word_to_test: str, result: bool) -> None:
