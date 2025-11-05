@@ -8,7 +8,9 @@ import pytest
         ("word", True),
         ("revers", False),
         ("Litle", False),
-        ("", True)
+        ("", True),
+        ("banana", False),
+        ("alphabet", False)
     ]
 )
 def test_is_isogram(word: str, expected: str) -> None:
