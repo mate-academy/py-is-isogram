@@ -1,3 +1,15 @@
 from app.main import is_isogram
+import pytest
 
-# write your code here
+
+@pytest.mark.parametrize(
+    "word,expected",
+    [
+        ("word", True),
+        ("revers", False),
+        ("Litle", False),
+        ("", True)
+    ]
+)
+def test_is_isogram(word: str, expected: str) -> None:
+    assert is_isogram(word) == expected
