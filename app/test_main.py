@@ -10,7 +10,9 @@ import pytest
         ("Litle", False),
         ("", True),
         ("banana", False),
-        ("alphabet", False)
+        ("alphabet", False),
+        ("moOse", False),
+        ("aba", False)
     ]
 )
 def test_is_isogram(word: str, expected: str) -> None:
