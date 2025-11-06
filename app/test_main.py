@@ -14,6 +14,9 @@ class TestIsIsogram:
                             "from word are duplicated"),
             pytest.param("False", True, id="should be case-insensitive"),
             pytest.param("", True, id="should retturn True if word is empty"),
+            pytest.param("alphabet", False,
+                         id="should return False if not "
+                            "only consecutive letters repeated"),
         ]
     )
     def test_is_isogram(self, word: str, expected: bool) -> None:
@@ -23,4 +26,5 @@ class TestIsIsogram:
 def test_error_occured() -> None:
     with pytest.raises(AttributeError):
         is_isogram(None)
+    with pytest.raises(AttributeError):
         is_isogram(1)
