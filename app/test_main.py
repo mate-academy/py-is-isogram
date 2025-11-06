@@ -1,7 +1,6 @@
-# app/test_main.py
-
 import pytest
 from app.main import is_isogram
+
 
 @pytest.mark.parametrize("word, expected", [
     ("playgrounds", True),
