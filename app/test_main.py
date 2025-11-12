@@ -3,7 +3,7 @@ import pytest
 
 
 @pytest.mark.parametrize(
-    "word, bool",
+    "word, bools",
     [
         ("playgrounds", True),
         ("Adam", False),
@@ -21,5 +21,5 @@ import pytest
         "empty string"
     ]
 )
-def test_is_isogram(word, bool):
-    assert is_isogram(word) == bool
+def test_is_isogram(word: str, bools: bool) -> None:
+    assert is_isogram(word) == bools
