@@ -25,5 +25,5 @@ def test_is_isogram_function(word: str, expected: bool) -> None:
     ],
 )
 def test_type_of_value(word: Any) -> None:
-    with pytest.raises(TypeError):
+    with pytest.raises(AttributeError):
         is_isogram(word)
