@@ -7,7 +7,8 @@ from app.main import is_isogram
     "word,expected",
     [
         (
-            "playgrounds", True
+            "playgrounds",
+            True
         ),
         (
             "look",
