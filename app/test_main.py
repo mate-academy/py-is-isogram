@@ -19,8 +19,11 @@ def test_should_return_bool() -> None:
         ("", True)
     ]
 )
-def test_coin_combination(word: str, bool_result: bool) -> None:
+def test_should_ignore_case_when_checking_duplicates(
+        word: str,
+        bool_result: bool
+) -> None:
     assert is_isogram(word) == bool_result, (
         f"Function 'is_isogram' should return {bool_result} "
-        f"when value is {word}"
+        f"when word is {word}"
     )
