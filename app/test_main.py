@@ -1,3 +1,29 @@
+import pytest
+
 from app.main import is_isogram
 
-# write your code here
+
+def test_should_return_bool() -> None:
+    assert (
+        isinstance(is_isogram("look"), bool) is True
+    ), "Function 'is_isogram' should return bool"
+
+
+@pytest.mark.parametrize(
+    "word, bool_result",
+    [
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("isIsoGram", False),
+        ("", True)
+    ]
+)
+def test_should_ignore_case_when_checking_duplicates(
+        word: str,
+        bool_result: bool
+) -> None:
+    assert is_isogram(word) == bool_result, (
+        f"Function 'is_isogram' should return {bool_result} "
+        f"when word is {word}"
+    )
