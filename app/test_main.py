@@ -3,14 +3,14 @@ import pytest
 
 
 class TestMain:
-    @pytest.mark.parametrize("word, result_bool", [
+    @pytest.mark.parametrize("word, result", [
         ("playgrounds", True),
         ("look", False),
         ("Adam", False),
         ("", True)
     ])
-    def test_should_return_word_without_repetitions(self, word: str, result_bool: bool) -> None:
-        assert is_isogram(word) == result_bool
+    def test_return_word_is_unique(self, word: str, result: bool) -> None:
+        assert is_isogram(word) == result
 
     def test_should_raise_type_error(self) -> None:
         with pytest.raises(TypeError):
