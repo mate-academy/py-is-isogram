@@ -1,18 +1,18 @@
-from app.main import is_isogram
+from app import main
 import pytest
 
 
 @pytest.mark.parametrize(
     "word , expected",
     [
-        ("GemoGrapHic", True),
+        ("DemoGrapHic", True),
         ("adam", False),
         ("bankruptcy", True),
         ("", True),
         ("gagarin", False),
-        ("GaGarIn", False),
+        ("GagArIn", False),
         ("look", False)
     ]
 )
 def test_word_is_isogram(word: str, expected: bool) -> None:
-    assert is_isogram(word) == expected
+    assert main.is_isogram(word) == expected
