@@ -7,7 +7,7 @@ import pytest
     [
         ("playgrounds", True),
         ("adam", False),
-        ("PlAyGrOuNds", False),
+        ("PlayGrounds", False),
         ("", True),
         ("gagarin", False),
         ("GaGarIn", False),
