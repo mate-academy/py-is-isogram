@@ -5,9 +5,9 @@ import pytest
 @pytest.mark.parametrize(
     "word , expected",
     [
-        ("playgrounds", True),
+        ("GemoGrapHic", True),
         ("adam", False),
-        ("PlayGrounds", False),
+        ("bankruptcy", True),
         ("", True),
         ("gagarin", False),
         ("GaGarIn", False),
