@@ -9,7 +9,7 @@ from app.main import is_isogram
         ("playgrounds", True),
         ("Look", False),
         ("Adam", False),
-        (" ", True)
+        ("", True)
     ]
 )
 def test_word_is_isogram(word: str, expected: bool) -> None:
