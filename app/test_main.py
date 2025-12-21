@@ -28,7 +28,7 @@ cases = [
     "word,correct_result",
     cases,
     ids=[
-        f"{word} {"is" if res else "is not"} an isogram"
+        f"{word} {'is' if res else 'is not'} an isogram"
         for word, res in cases
     ]
 )
