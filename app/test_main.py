@@ -5,16 +5,17 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("playgrounds", True),
-        ("look", False),
-        ("Adam", False),
+        ("asdfghjkl;", True),
+        ("doomk", False),
+        ("Buibnm", False),
         ("", True),
-        ("abc", True),
-        ("Aa", False),
-        ("Dermatoglyphics", True),
-        ("isogram", True),
-        ("moOse", False),
+        ("yui", True),
+        ("Bb", False),
+        ("Dasfglui", True),
+        ("vbnmcxz", True),
+        ("gkJjbn", False),
     ],
 )
-def test_is_isogram(word: str, expected: bool) -> None:
-    assert is_isogram(word) is expected
+
+def test_is_isogram(word: str, expected: bool):
+    assert is_isogram(word) == expected
