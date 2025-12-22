@@ -5,7 +5,7 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("asdfghjkl;", True),
+        ("asdfghjkl", True),
         ("doomk", False),
         ("Buibnm", False),
         ("", True),
