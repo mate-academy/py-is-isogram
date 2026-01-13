@@ -11,7 +11,5 @@ from app.main import is_isogram
         ("", True),
     ],
 )
-
-
 def test_is_isogram(words: str, expected: bool) -> None:
     assert is_isogram(words) == expected
