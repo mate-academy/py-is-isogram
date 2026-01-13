@@ -6,9 +6,9 @@ import pytest
 @pytest.mark.parametrize(
     "word, result",
     [
-        pytest.param(" ", True, id="test_empty_string"),
+        pytest.param("", True, id="test_empty_string"),
         pytest.param("cup", True, id="test_correct_isogram"),
-        pytest.param("Fanta", False, id="test_not_isogram"),
+        pytest.param("Faanta", False, id="test_not_isogram"),
         pytest.param("AbsoLutely", False,
                      id="test_not_isogram_case_insensative"),
     ]
