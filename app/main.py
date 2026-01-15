@@ -1,5 +1,7 @@
 def is_isogram(word: str) -> bool:
-    word_lower = word.lower()
+    word_lower = None
+    if isinstance(word, str):
+        word_lower = word.lower()
     for letter in word_lower:
         if word_lower.count(letter) > 1:
             return False
