@@ -7,7 +7,7 @@ class TestIsIsogram:
         assert is_isogram("abc") is True
 
     def test_case_insensitive(self) -> None:
-        assert is_isogram("heLlo") is False
+        assert is_isogram("Bob") is False
 
     def test_empty_string(self) -> None:
         assert is_isogram("") is True
