@@ -16,10 +16,10 @@ Notes:
 
 Examples:
 ```python
-is_isogram('playgrounds') is True
-is_isogram('look') is False
-is_isogram('Adam') is False
-is_isogram('') is True
+is_isogram("playgrounds") is True
+is_isogram("look") is False
+is_isogram("Adam") is False
+is_isogram("") is True
 ```
 
 Run `pytest app/` to check if function pass your tests.
