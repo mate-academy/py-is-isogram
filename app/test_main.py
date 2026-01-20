@@ -1,17 +1,17 @@
 from app.main import is_isogram
 
 
-def test_empty_string() -> None:
+def test_isogram_is_case_insensitive() -> None:
+    assert is_isogram("How it has been") is False
+
+
+def test_empty_string_is_isogram() -> None:
     assert is_isogram("") is True
 
 
-def test_non_empty_string() -> None:
-    assert is_isogram("playgrounds") is True
+def test_non_consecutive_letters_are_not_isogram() -> None:
+    assert is_isogram("Word when") is False
 
 
-def test_word_with_the_capital_letter() -> None:
-    assert is_isogram("Adam") is False
-
-
-def test_not_consecutive_letters_on_the_isogram() -> None:
-    assert is_isogram("Word hello") is False
+def test_consecutive_letters_are_not_isogram() -> None:
+    assert is_isogram("abccd") is False
