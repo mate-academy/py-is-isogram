@@ -1,5 +1,4 @@
 from app.main import is_isogram
-from tests.test_tests import test_consecutive_letters_are_not_isogram
 
 
 def test_is_isogram() -> None:
@@ -16,6 +15,7 @@ def test_empty_string() -> None:
 
 def test_if_is_case_sensitive() -> None:
     assert is_isogram("ButTerfly") is False
+
 
 def test_not_only_consecutive_letters_are_not_isogram() -> None:
     assert is_isogram("Adam") is False
