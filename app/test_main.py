@@ -14,7 +14,7 @@ import pytest
             id="The test returns True because it is an isogram"
         ),
         pytest.param(
-            "MM", False,
+            "Mm", False,
             id="The test returns False because the text is not an isogram"
         ),
         pytest.param(
