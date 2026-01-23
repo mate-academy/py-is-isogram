@@ -29,5 +29,5 @@ import pytest
     ]
 
 )
-def test_is_isogram(word_lower: str, result: bool) -> None:
+def test_isogram_is_case_insensitive(word_lower: str, result: bool) -> None:
     assert is_isogram(word_lower) == result
