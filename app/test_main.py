@@ -3,10 +3,8 @@ from app.main import is_isogram
 
 
 @pytest.mark.parametrize("line, expected_answer",
-        [                
-            ['', True]                
-                                     
+        [
+            ["", True]
         ])
-
-def test_line_len(line: str, expected_answer: bool) -> None:
-    assert len(line) == 0
+def test_line_len(line: str, expected_answer: True) -> None:
+    assert is_isogram(line) == True
