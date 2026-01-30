@@ -9,6 +9,7 @@ from app.main import is_isogram
         ("playgrounds", True),
         ("background", True),
         ("a", True),
+        ("", True),
         ("look", False),
         ("subdermatoglyphic", True),
         ("subdermatoglyphics", False),
