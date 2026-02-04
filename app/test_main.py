@@ -13,6 +13,5 @@ import pytest
         ("lEtTEr", False)
     ]
 )
-
-def test_is_isogram(word, result) -> None:
+def test_is_isogram(word: str, result: bool) -> None:
     assert is_isogram(word) == result
