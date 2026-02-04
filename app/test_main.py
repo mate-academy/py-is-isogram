@@ -8,9 +8,11 @@ import pytest
         ("playgrounds", True),
         ("look", False),
         ("Adam", False),
-        ("", True)
+        ("", True),
+        ("SOURCE", True),
+        ("lEtTEr", False)
     ]
 )
 
-def test_is_isogram(word, result):
+def test_is_isogram(word, result) -> None:
     assert is_isogram(word) == result
