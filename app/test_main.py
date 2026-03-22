@@ -22,8 +22,13 @@ def test_should_return_proper_value(word: str, result: bool) -> None:
                          [
                              (0, TypeError),
                              ([], TypeError),
+                             (123, TypeError),
+                             (["b", "c"], TypeError)
                          ]
                          )
-def test_should_return_expected_error(value: str | int | list, expected_exception: Type[Exception]):
+def test_should_return_expected_error(
+        value: str | int | list,
+        expected_exception: Type[Exception],
+) -> None:
     with pytest.raises(expected_exception):
         is_isogram(value)
