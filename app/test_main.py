@@ -5,10 +5,10 @@ from app.main import is_isogram
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ('playgrounds', True),
-        ('look', False),
-        ('Adam', False),
-        ('', True),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True),
         ("abcABC", False)
     ],
 )
