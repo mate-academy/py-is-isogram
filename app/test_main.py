@@ -1,43 +1,41 @@
-import pytest
-
 from app.main import is_isogram
 
 
-def test_empty_string_is_isogram():
+def test_empty_string_is_isogram() -> None:
     assert is_isogram("") is True
 
 
-def test_single_letter_is_isogram():
+def test_single_letter_is_isogram() -> None:
     assert is_isogram("a") is True
 
 
-def test_simple_isogram():
+def test_simple_isogram() -> None:
     assert is_isogram("playgrounds") is True
 
 
-def test_repeating_letters_not_isogram():
+def test_repeating_letters_not_isogram() -> None:
     assert is_isogram("look") is False
 
 
-def test_case_insensitive_check():
+def test_case_insensitive_check() -> None:
     assert is_isogram("Adam") is False
 
 
-def test_all_unique_uppercase():
-    assert is_isogram("DERMATOGlyphics".upper()) is True
+def test_all_unique_uppercase() -> None:
+    assert is_isogram("DERMATOGLYPHICS") is True
 
 
-def test_mixed_case_unique_letters():
+def test_mixed_case_unique_letters() -> None:
     assert is_isogram("Dermatoglyphics") is True
 
 
-def test_multiple_repeated_letters():
+def test_multiple_repeated_letters() -> None:
     assert is_isogram("mississippi") is False
 
 
-def test_long_isogram():
+def test_long_isogram() -> None:
     assert is_isogram("subdermatoglyphic") is True
 
 
-def test_repeated_non_consecutive_letters():
+def test_repeated_non_consecutive_letters() -> None:
     assert is_isogram("alphabet") is False
