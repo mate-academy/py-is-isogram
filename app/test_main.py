@@ -1,13 +1,14 @@
 import pytest
 from app.main import is_isogram
 
+
 @pytest.mark.parametrize(
     "word, result",
     [
         pytest.param(
             "playgrounds",
             True,
-            id= "test playgrounds"
+            id="test playgrounds"
         ),
         pytest.param(
             "look",
