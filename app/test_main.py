@@ -1,8 +1,8 @@
 from app.main import is_isogram
 import pytest
 
-class TestIsogram:
 
+class TestIsogram:
     @pytest.mark.parametrize(
         "testing_string, expected_result",
         (
