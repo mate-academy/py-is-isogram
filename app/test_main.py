@@ -13,7 +13,7 @@ from app.main import is_isogram
         ("", True),
         ("isogram", True),
         ("letter", False),
-        ("Alphabet", False),  # A повторюється (case-insensitive)
+        ("Alphabet", False),
         ("Dermatoglyphics", True),
         ("aba", False),
         ("A", True),
