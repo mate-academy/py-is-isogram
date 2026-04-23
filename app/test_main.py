@@ -2,20 +2,20 @@ from app.main import is_isogram
 
 
 def test_no_repeating_letters() -> None:
-    assert is_isogram("nightmare") == True
+    assert is_isogram("nightmare")
 
 
 def test_repeating_letters() -> None:
-    assert is_isogram("boss") == False
+    assert not is_isogram("boss")
 
 
 def test_no_letters() -> None:
-    assert is_isogram("") == True
+    assert is_isogram("")
 
 
 def test_consecutive_word() -> None:
-    assert is_isogram("SOS") == False
+    assert not is_isogram("SOS")
 
 
 def test_lower_and_upper_case() -> None:
-    assert is_isogram("preSs") == False
+    assert not is_isogram("preSs")
