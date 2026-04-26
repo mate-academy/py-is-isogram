@@ -8,9 +8,9 @@ class TestIsIsogram:
     @pytest.mark.parametrize(
         "test_str,expected_bool",
         [
-            ("playgrounds", True),
             ("look", False),
             ("Adam", False),
+            ("playgrounds", True),
             ("", True),
         ]
     )
