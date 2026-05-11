@@ -5,9 +5,9 @@ import app.main as main
 @pytest.mark.parametrize(
     "word, expected",
     [
-        ("something", True),
-        ("football", False),
-        ("Anna", False),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
         ("", True)
     ]
 )
