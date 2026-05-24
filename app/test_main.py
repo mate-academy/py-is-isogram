@@ -6,16 +6,16 @@ from app.main import is_isogram
     "word,expected_bool",
     [
         (
-            'playgrounds', True
+            "playgrounds", True
         ),
         (
-            'look', False
+            "look", False
         ),
         (
-            'Adam', False
+            "Adam", False
         ),
         (
-            '', True
+            "", True
         ),
     ]
 )
