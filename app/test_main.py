@@ -7,14 +7,14 @@ from app import main
     [
         ("isogram", True),
         ("moon", False),
-        ("backgroun", False),
+        ("background", False),
     ],
 )
-def test_is_isogram_with_words(word, expected):
+def test_is_isogram_with_words(word: str, expected: bool) -> None:
     assert main.is_isogram(word) is expected
 
 
-def test_is_isogram_with_empty_string():
+def test_is_isogram_with_empty_string() -> None:
     assert main.is_isogram("") is True
 
 
@@ -25,5 +25,5 @@ def test_is_isogram_with_empty_string():
         ("ISOGRAM", True),
     ],
 )
-def test_is_isogram_with_uppercase_letters(word, expected):
+def test_is_isogram_with_uppercase_letters(word: str, expected: bool) -> None:
     assert main.is_isogram(word) is expected
