@@ -7,7 +7,7 @@ from app import main
     [
         ("isogram", True),
         ("moon", False),
-        ("background", False),
+        ("seven", False),
     ],
 )
 def test_is_isogram_with_words(word: str, expected: bool) -> None:
