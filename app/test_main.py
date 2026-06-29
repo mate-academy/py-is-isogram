@@ -1,3 +1,7 @@
 from app.main import is_isogram
 
-# write your code here
+def test_should_return_true_if_str_empty():
+    assert is_isogram("") == True
+
+def test_should_be_case_insensitive():
+    assert is_isogram("aA") is False
