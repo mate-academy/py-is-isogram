@@ -40,6 +40,6 @@ def test_is_isogram_invalid_input(word: str) -> None:
         ["playgrounds"],
     ],
 )
-def test_is_isogram_wrong_type(word: Any) -> None:
+def test_is_isogram_wrong_type(word: str) -> None:
     with pytest.raises(TypeError):
         is_isogram(word)
