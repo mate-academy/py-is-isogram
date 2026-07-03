@@ -10,3 +10,7 @@ def test_should_be_case_insensitive():
 
 def test_should_return_false_when_letters_repeat():
     assert is_isogram("look") is False
+
+
+def test_should_true_if_isogram():
+    assert is_isogram("playground") is True
