@@ -4,18 +4,27 @@ from app.main import is_isogram
 
 
 @pytest.mark.parametrize(
-    "word, expected",
+    "word",
     [
-        "playgrounds", True,
-        "", True,
-        "", True,
-        "look", False,
-        "Adam", False,
-        "Alphabet", False,
+        "playgrounds",
+        "",
+        "subdermatoglyphic",
     ],
 )
-def test_is_isogram_valid_cases(word: str, expected: bool) -> None:
-    assert is_isogram(word) is expected
+def test_is_isogram_true_cases(word: str) -> None:
+    assert is_isogram(word) is True
+
+
+@pytest.mark.parametrize(
+    "word",
+    [
+        "look",
+        "Adam",
+        "Alphabet",
+    ],
+)
+def test_is_isogram_false_cases(word: str) -> None:
+    assert is_isogram(word) is False
 
 
 @pytest.mark.parametrize(
@@ -26,7 +35,7 @@ def test_is_isogram_valid_cases(word: str, expected: bool) -> None:
         None,
         True,
         False,
-        (["a", "b"]),
+        ["a", "b"],
     ],
 )
 def test_is_isogram_invalid_types(wrong_word: Any) -> None:
