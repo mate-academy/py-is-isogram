@@ -1,6 +1,15 @@
+import pytest
+
+
+@pytest.mark.parametrize("word, expected", [
+    ("", True),
+    ("z", True),
+    ("playgrounds", True),
+    ("look", False),
+    ("alphabet", False),
+    ("Adam", False),
+    ("Aa", False),
+])
 def is_isogram(word: str) -> bool:
     word_lower = word.lower()
-    for letter in word_lower:
-        if word_lower.count(letter) > 1:
-            return False
-    return True
+    return len(set(word_lower)) == len(word_lower)
