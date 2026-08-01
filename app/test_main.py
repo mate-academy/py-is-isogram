@@ -1,3 +1,30 @@
+import pytest
 from app.main import is_isogram
 
-# write your code here
+
+@pytest.mark.parametrize(
+    "word, result",
+    [
+        pytest.param(
+            "playgrounds",
+            True
+        ),
+        pytest.param(
+            "look",
+            False
+        ),
+        pytest.param(
+            "Adam",
+            False
+        ),
+        pytest.param(
+            "",
+            True
+        )
+    ]
+)
+def test_function_working_correctly(
+    word: str,
+    result: bool
+) -> None:
+    assert is_isogram(word) == result
