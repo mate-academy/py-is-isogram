@@ -1,3 +1,18 @@
+import pytest
+
 from app.main import is_isogram
 
-# write your code here
+
+@pytest.mark.parametrize(
+    "word_test, expected",
+    [
+        ("Play", True),
+        ("playgrounds", True),
+        ("look", False),
+        ("Adam", False),
+        ("", True),
+        ("aaaa", False)
+    ]
+)
+def test_case(word_test: str, expected: bool) -> None:
+    assert is_isogram(word_test) == expected
