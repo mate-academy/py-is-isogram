@@ -6,7 +6,7 @@ An isogram is a word that has no repeating letters, consecutive or non-consecuti
 
 Inside `app/test_main.py`, write tests for a function `is_isogram` that takes a string word, that contains only letters, 
 and checks whether this word is an isogram.
-
+ 
 Notes:
 
 - for this task, the empty string is an isogram;
