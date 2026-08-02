@@ -1,3 +1,23 @@
 from app.main import is_isogram
 
-# write your code here
+
+def test_isogram_playgrounds() -> None:
+    assert is_isogram("playgrounds") is True
+
+
+def test_not_isogram_look() -> None:
+    assert is_isogram("look") is False
+
+
+def test_not_isogram_adam_case_insensitive() -> None:
+    assert is_isogram("Adam") is False
+
+
+def test_empty_string_is_isogram() -> None:
+    assert is_isogram("") is True
+
+
+def test_isogram_case_insensitive_repeat() -> None:
+    assert is_isogram("Dermatoglyphics") is True
+    assert is_isogram("aba") is False
+    assert is_isogram("abcA") is False
