@@ -1,3 +1,19 @@
+import pytest
+
 from app.main import is_isogram
 
-# write your code here
+
+class TestIsIsogram:
+    @pytest.mark.parametrize(
+        "input_word,result",
+        [
+            ("test", False),
+            ("Test", False),
+            ("python", True),
+            ("sayWHT", True),
+            ("", True)
+        ]
+    )
+    def test_should_check_properly(self, input_word: str,
+                                   result: bool) -> None:
+        assert is_isogram(input_word) == result
