@@ -2,6 +2,7 @@ import pytest
 
 from app import main
 
+
 @pytest.mark.parametrize(
     "word, expected", [
         ("playgrounds", True),
@@ -12,6 +13,6 @@ from app import main
     ]
 )
 def test_is_isogram(word: str, expected: bool) -> None:
-    assert(
+    assert (
         main.is_isogram(word) == expected
     ), "Test should return if isogram"
