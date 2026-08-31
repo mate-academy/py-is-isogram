@@ -5,9 +5,3 @@ def is_isogram(word: str) -> bool:
         if word_lower.count(letter) > 1:
             return False
     return True
-
-
-is_isogram('playgrounds') is True
-is_isogram('look') is False
-is_isogram('Adam') is False
-is_isogram('') is True
