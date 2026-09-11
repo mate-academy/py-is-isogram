@@ -31,7 +31,7 @@ class TestIsIsogram:
     )
     def test_if_is_isogram(self,
                            initial_word: str,
-                           expected_result: bool):
+                           expected_result: bool) -> None:
         assert is_isogram(initial_word) == expected_result
 
     @pytest.mark.parametrize(
@@ -45,6 +45,6 @@ class TestIsIsogram:
     )
     def test_if_right_error_raising(self,
                                     initial_word: Any,
-                                    expected_error: Any):
+                                    expected_error: Any) -> None:
         with pytest.raises(expected_error):
             is_isogram(initial_word)
