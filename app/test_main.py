@@ -14,6 +14,7 @@ from app.main import is_isogram
         ("g", True),
         ("abcABC", False),
         ("Python", True),
+        ("", True),
     ],
 )
 def test_is_isogram(word: str, expected: list) -> None:
