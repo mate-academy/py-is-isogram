@@ -29,8 +29,8 @@ def test_uppercase_and_lowercase_are_compared_case_insensitively() -> None:
     assert is_isogram("MoOse") is False
 
 
-def test_word_with_all_uppercase_letters_is_isogram() -> None:
-    assert is_isogram("ALPHA") is True
+def test_word_with_repeated_uppercase_letter_is_not_isogram() -> None:
+    assert is_isogram("ALPHA") is False
 
 
 def test_word_with_all_lowercase_letters_is_isogram() -> None:
@@ -42,7 +42,7 @@ def test_consecutive_repeated_letters_are_not_isogram() -> None:
 
 
 def test_non_consecutive_repeated_letters_are_not_isogram() -> None:
-    assert is_isogram("isogram") is False
+    assert is_isogram("moose") is False
 
 
 def test_long_word_without_repeated_letters_is_isogram() -> None:
@@ -61,10 +61,10 @@ def test_long_word_without_repeated_letters_is_isogram() -> None:
         ("look", False),
         ("Adam", False),
         ("MoOse", False),
-        ("ALPHA", True),
+        ("ALPHA", False),
         ("background", True),
         ("letter", False),
-        ("isogram", False),
+        ("isogram", True),
         ("uncopyrightable", True),
     ],
 )
