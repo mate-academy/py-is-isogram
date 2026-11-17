@@ -8,7 +8,7 @@ from app.main import is_isogram
     "word, bool_result",
     [
         pytest.param("", True, id="Empty string is an Isogram."),
-        pytest.param("Mam", False, id="Word with capital letters at the beginning."),
+        pytest.param("Mam", False, id="Word with capital letter."),
         pytest.param("A", True, id="A single capital letter is an Isogram."),
         pytest.param("a", True, id="A single letter is an isogram."),
         pytest.param("Ambiguos", True, id="Long Isogram."),
@@ -21,5 +21,5 @@ from app.main import is_isogram
         pytest.param("word", True, id="word is an Isogram."),
     ]
 )
-def test_is_isogram(word, bool_result):
+def test_is_isogram(word: str, bool_result: bool) -> None:
     assert (is_isogram(word) == bool_result), f"Error with the word {word}."
