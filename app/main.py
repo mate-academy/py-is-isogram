@@ -1,4 +1,11 @@
 def is_isogram(word: str) -> bool:
+
+    if type(word) is not str:
+        raise TypeError
+
+    if not word:
+        raise ValueError
+
     word_lower = word.lower()
     for letter in word_lower:
         if word_lower.count(letter) > 1:
